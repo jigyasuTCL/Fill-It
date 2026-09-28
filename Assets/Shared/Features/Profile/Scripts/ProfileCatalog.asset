@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e2c1c06284f0469663d8c536eea16, type: 3}
+  m_Name: ProfileCatalog
+  m_EditorClassIdentifier: 
+  avatarCategories:
+  - Title: Classic
+    Items:
+    - Id: cat
+      Art: {fileID: 21300000, guid: 2aaeac83e6617f8459d043238472b6df, type: 3}
+      DisplayName: Cat
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: deer
+      Art: {fileID: 21300000, guid: 9b3e4ef98217a2a4f82ae5dbd178b1d9, type: 3}
+      DisplayName: Deer
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: goose
+      Art: {fileID: 21300000, guid: 47b9d6643c460e6408df8fe05e9750de, type: 3}
+      DisplayName: Goose
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: panda
+      Art: {fileID: 21300000, guid: fbcf52bfc27448e4599eeec3ea5c4dcc, type: 3}
+      DisplayName: Panda
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: penguin
+      Art: {fileID: 21300000, guid: 45707c27aad29fa469c6de56e89ebca5, type: 3}
+      DisplayName: Penguin
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: polar_bear
+      Art: {fileID: 21300000, guid: dbc2d2701c29cb04b922151a86fc785c, type: 3}
+      DisplayName: Polar Bear
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: raccoon
+      Art: {fileID: 21300000, guid: 753c9071125139f4e852a342332a74ff, type: 3}
+      DisplayName: Raccoon
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: red_panda
+      Art: {fileID: 21300000, guid: bae5b7e0b9852b14e9564f7420d6ea99, type: 3}
+      DisplayName: Red Panda
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    Enabled: 1
+  frameCategories:
+  - Title: Classic
+    Items:
+    - Id: blue
+      Art: {fileID: 21300000, guid: 62834f5fbd0ab864b91192031fcbc4f9, type: 3}
+      DisplayName: Blue
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: green
+      Art: {fileID: 21300000, guid: 68c7f3f2798a49045948a81a9bc84314, type: 3}
+      DisplayName: Green
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: purple
+      Art: {fileID: 21300000, guid: 3d877e86e74dad646b73d086d2792893, type: 3}
+      DisplayName: Purple
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    - Id: red
+      Art: {fileID: 21300000, guid: c0ed6ee75e3f5dd4baac1431afa8c513, type: 3}
+      DisplayName: Red
+      Enabled: 1
+      Unlock: 0
+      UnlockLevel: 0
+      ProductId: 
+      PriceLabel: 
+      RewardHint: 
+    Enabled: 1

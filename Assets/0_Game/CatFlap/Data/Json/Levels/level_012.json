@@ -1,0 +1,112 @@
+{
+  "index": 12,
+  "name": "Level 12",
+  "set": "progression_1_6",
+  "difficulty": "Easy",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      null,
+      1,
+      0,
+      1,
+      null
+    ],
+    [
+      0,
+      null,
+      0,
+      0,
+      null,
+      null
+    ],
+    [
+      null,
+      1,
+      0,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      0,
+      null,
+      null,
+      1,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      null,
+      0,
+      0
+    ],
+    [
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  ]
+}

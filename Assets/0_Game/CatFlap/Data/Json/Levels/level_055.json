@@ -1,0 +1,182 @@
+{
+  "index": 55,
+  "name": "Level 55",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 8,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      0,
+      0,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      0,
+      null,
+      null,
+      null,
+      1
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      1
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      null,
+      1,
+      1,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      0,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "checkpoint": true,
+  "coach": {
+    "icon": "🚩",
+    "title": "Checkpoint — the harder of the pair",
+    "body": "About an eighth more work than level 53, on the same size board. That gap holds for every pair from here to level 100."
+  }
+}

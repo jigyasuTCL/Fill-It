@@ -1,0 +1,70 @@
+{
+  "index": 5,
+  "name": "Level 5",
+  "set": "progression_1_6",
+  "difficulty": "Easy",
+  "size": 4,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "checkpoint": true,
+  "coach": {
+    "icon": "🚩",
+    "title": "Checkpoint — four squares",
+    "body": "Read the counters: <span class=\"text-rose-500 font-black\">pink</span> counts Cats, <span class=\"text-cyan-500 font-black\">blue</span> counts Fish. Fill the four gaps so every line ends with two of each."
+  }
+}

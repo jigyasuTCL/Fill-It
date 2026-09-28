@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733b794eafada4cbc828e161b628a864, type: 3}
+  m_Name: StoreConfig
+  m_EditorClassIdentifier: 
+  config:
+    Items:
+    - ItemId: remove_ads
+      Type: 0
+      Enabled: 1
+      Icon: {fileID: 21300000, guid: 824b6cf97dfdf5d42a5e05b4a9bf377e, type: 3}
+      IconKey: remove_ads
+      Title: Remove Ads
+      Description: 'Removes non optional ads.
+
+        Reward based ads will still
+        be available'
+      CoinAmount: 0
+      ProductId: cf_noads
+      PriceLabel: $ 9.99
+      HasDiscount: 0
+      OldPriceLabel: 
+      IsTimerBased: 0
+      TimerHours: 4
+      IsRepeatable: 0
+      MaxPurchaseCount: 0
+      HasCooldown: 0
+      CooldownHours: 0
+    - ItemId: coins500
+      Type: 2
+      Enabled: 1
+      Icon: {fileID: 21300000, guid: beccba3ab5b2e934fb68f9c70bf02185, type: 3}
+      IconKey: icon_coin_boarder
+      Title: 
+      Description: 
+      CoinAmount: 500
+      ProductId: cf_coins_500
+      PriceLabel: $ 9.99
+      HasDiscount: 0
+      OldPriceLabel: 
+      IsTimerBased: 0
+      TimerHours: 0
+      IsRepeatable: 1
+      MaxPurchaseCount: 0
+      HasCooldown: 0
+      CooldownHours: 0
+    - ItemId: coins1500
+      Type: 2
+      Enabled: 1
+      Icon: {fileID: 21300000, guid: beccba3ab5b2e934fb68f9c70bf02185, type: 3}
+      IconKey: icon_coin_boarder
+      Title: 
+      Description: 
+      CoinAmount: 1500
+      ProductId: cf_coins_1500
+      PriceLabel: $5.99
+      HasDiscount: 0
+      OldPriceLabel: 
+      IsTimerBased: 0
+      TimerHours: 0
+      IsRepeatable: 1
+      MaxPurchaseCount: 0
+      HasCooldown: 0
+      CooldownHours: 0
+    - ItemId: coins3500
+      Type: 2
+      Enabled: 1
+      Icon: {fileID: 21300000, guid: 9a6253dfc3877db4a8ab97332b65967e, type: 3}
+      IconKey: icon_coin_boarder
+      Title: 
+      Description: 
+      CoinAmount: 3500
+      ProductId: cf_coins_3500
+      PriceLabel: $9.99
+      HasDiscount: 0
+      OldPriceLabel: 
+      IsTimerBased: 0
+      TimerHours: 0
+      IsRepeatable: 1
+      MaxPurchaseCount: 0
+      HasCooldown: 0
+      CooldownHours: 0
+    - ItemId: coins8000
+      Type: 2
+      Enabled: 1
+      Icon: {fileID: 21300000, guid: 9a6253dfc3877db4a8ab97332b65967e, type: 3}
+      IconKey: icon_coin_boarder
+      Title: 
+      Description: 
+      CoinAmount: 8000
+      ProductId: cf_coins_8000
+      PriceLabel: $19.99
+      HasDiscount: 0
+      OldPriceLabel: 
+      IsTimerBased: 0
+      TimerHours: 0
+      IsRepeatable: 1
+      MaxPurchaseCount: 0
+      HasCooldown: 0
+      CooldownHours: 0
+    - ItemId: coins20000
+      Type: 2
+      Enabled: 1
+      Icon: {fileID: 21300000, guid: 7aff29ffc2ef04b44aab35b504d4bc0f, type: 3}
+      IconKey: icon_coin3_boarder
+      Title: 
+      Description: 
+      CoinAmount: 20000
+      ProductId: cf_coins_20000
+      PriceLabel: $19.99
+      HasDiscount: 0
+      OldPriceLabel: 
+      IsTimerBased: 0
+      TimerHours: 0
+      IsRepeatable: 1
+      MaxPurchaseCount: 0
+      HasCooldown: 0
+      CooldownHours: 0
+    - ItemId: coins45000
+      Type: 2
+      Enabled: 1
+      Icon: {fileID: 21300000, guid: 7aff29ffc2ef04b44aab35b504d4bc0f, type: 3}
+      IconKey: icon_coin3_boarder
+      Title: 
+      Description: 
+      CoinAmount: 45000
+      ProductId: cf_coins_45000
+      PriceLabel: $49.99
+      HasDiscount: 0
+      OldPriceLabel: 
+      IsTimerBased: 0
+      TimerHours: 0
+      IsRepeatable: 1
+      MaxPurchaseCount: 0
+      HasCooldown: 0
+      CooldownHours: 0

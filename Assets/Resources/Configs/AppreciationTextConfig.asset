@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae7ec05d21a240a293b025578254e91, type: 3}
+  m_Name: AppreciationTextConfig
+  m_EditorClassIdentifier: 
+  easy:
+    entries:
+    - textImage: {fileID: 21300000, guid: 0f0fec898dfcd474aaff528e4b90b0ed, type: 3}
+      sfx: {fileID: 8300000, guid: a2bcf0872bfd6414a97b7e4d951961f9, type: 3}
+      particleColor: 1
+    - textImage: {fileID: 21300000, guid: 38e15e9e0f374b94b85ef5bd12ddf3e7, type: 3}
+      sfx: {fileID: 8300000, guid: 160910f36334f4064b046148059146b2, type: 3}
+      particleColor: 3
+    - textImage: {fileID: 21300000, guid: 68b2f5987f8bc499991103b2b003bcd1, type: 3}
+      sfx: {fileID: 8300000, guid: 78bebd64e96324188b14dce9d75148c2, type: 3}
+      particleColor: 0
+    - textImage: {fileID: 21300000, guid: a65c5e1981b3b44d0aa7c616a06ec3b0, type: 3}
+      sfx: {fileID: 8300000, guid: be3a64da50ab24226a39e7b31d64e761, type: 3}
+      particleColor: 3
+  medium:
+    entries:
+    - textImage: {fileID: 21300000, guid: 0b02706ca0d5cbf4d86e3d15f05b4bf5, type: 3}
+      sfx: {fileID: 8300000, guid: 600fcb761ce654bdaaf14f204123984c, type: 3}
+      particleColor: 3
+    - textImage: {fileID: 21300000, guid: cecb8a42bd2270d439b912975ab818ae, type: 3}
+      sfx: {fileID: 8300000, guid: aab2ec0cbcb8c4dca92b934a3440d95a, type: 3}
+      particleColor: 0
+    - textImage: {fileID: 21300000, guid: 55ba6d0a7c28bb24599590f78808a2b7, type: 3}
+      sfx: {fileID: 8300000, guid: 13756f6d721b04e479d0fc967416e66e, type: 3}
+      particleColor: 1
+    - textImage: {fileID: 21300000, guid: ae10aea1267a75644a38ec16214db479, type: 3}
+      sfx: {fileID: 8300000, guid: d537e8e97186144728d6518689c9d34e, type: 3}
+      particleColor: 0
+  hard:
+    entries:
+    - textImage: {fileID: 21300000, guid: 8240bdfc18d501e429aaa777980a8b66, type: 3}
+      sfx: {fileID: 8300000, guid: 898bac2e7d64a4036856529486bcc5d4, type: 3}
+      particleColor: 1
+    - textImage: {fileID: 21300000, guid: 3019473429d5c014ebfcc0f6be6835e7, type: 3}
+      sfx: {fileID: 8300000, guid: e1ced0f79bf9e4bda8956de80e8a4efe, type: 3}
+      particleColor: 0
+    - textImage: {fileID: 21300000, guid: 1cfb6e9b793c01c47aaa1a9d23297ca6, type: 3}
+      sfx: {fileID: 8300000, guid: e8a5816e1b4484d04b0e66c7824f10c5, type: 3}
+      particleColor: 2
+    - textImage: {fileID: 21300000, guid: ab62f0543cb8d7a44b3308e08e3a55f2, type: 3}
+      sfx: {fileID: 8300000, guid: 9f8df8457931e4860842c2764c6419fa, type: 3}
+      particleColor: 2
+  veryHard:
+    entries:
+    - textImage: {fileID: 21300000, guid: fc96ae55fbefe284ba16fec257de4eba, type: 3}
+      sfx: {fileID: 8300000, guid: a4b62cffb63fc43b19814f19dfb1afcf, type: 3}
+      particleColor: 2
+    - textImage: {fileID: 21300000, guid: e64184b417377d24dbb2955ac3c56e67, type: 3}
+      sfx: {fileID: 8300000, guid: cc9936da0c202413794427771db1e842, type: 3}
+      particleColor: 2
+    - textImage: {fileID: 21300000, guid: bfd6504d25eed264fad843dde7b8aa36, type: 3}
+      sfx: {fileID: 8300000, guid: 5e0a35ebdf9f445fc9edc171ccf08c82, type: 3}
+      particleColor: 3
+    - textImage: {fileID: 21300000, guid: 54ac91e054da00e48ace7a710adc34f6, type: 3}
+      sfx: {fileID: 8300000, guid: fd3969aa946954122881280ee8fb877b, type: 3}
+      particleColor: 3
+  warning:
+    entries: []
+  defaultSfx: {fileID: 8300000, guid: 0ba77aa29c31d49048a67317a903e002, type: 3}
+  entranceDurationSeconds: 0.35
+  holdDurationSeconds: 1
+  exitDurationSeconds: 0.35
+  entranceStartScale: 0
+  entrancePeakScale: 1.5
+  entranceStartRotationDegrees: 0
+  exitMoveUpDistance: 2
+  queueStaggerSeconds: 0.15

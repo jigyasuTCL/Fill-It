@@ -1,0 +1,112 @@
+{
+  "index": 64,
+  "name": "Level 64",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      null,
+      0,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      1,
+      null,
+      null,
+      null,
+      0
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ]
+  ]
+}

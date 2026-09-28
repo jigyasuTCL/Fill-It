@@ -1,0 +1,112 @@
+{
+  "index": 47,
+  "name": "Level 47",
+  "set": "progression_1_6",
+  "difficulty": "Hard",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      1,
+      null,
+      0,
+      null,
+      null
+    ],
+    [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+    ],
+    [
+      0,
+      null,
+      1,
+      null,
+      null,
+      null
+    ],
+    [
+      0,
+      null,
+      null,
+      0,
+      null,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  ]
+}

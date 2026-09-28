@@ -1,0 +1,19 @@
+plugins {
+	id 'com.android.application' version '8.10.0' apply false
+	id 'com.android.library' version '8.10.0' apply false
+	**BUILD_SCRIPT_DEPS**
+}
+
+allprojects {
+	configurations.all {
+		// Needed for Firebase Android 34.0.0 version to work
+		resolutionStrategy {
+			force "androidx.appcompat:appcompat:1.6.1"
+			force "androidx.appcompat:appcompat-resources:1.6.1"
+		}
+	}
+}
+
+tasks.register('clean', Delete) {
+	delete rootProject.layout.buildDirectory
+}

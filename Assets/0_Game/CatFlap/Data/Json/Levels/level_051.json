@@ -1,0 +1,117 @@
+{
+  "index": 51,
+  "name": "Level 51",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      null,
+      1,
+      null,
+      null,
+      1
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+    ],
+    [
+      1,
+      1,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      0,
+      0,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  ],
+  "coach": {
+    "icon": "🧗",
+    "title": "The second half",
+    "body": "From here the big boards come <b>four to every ten levels</b> — at the third, fifth, eighth and tenth — and they still arrive in pairs."
+  }
+}

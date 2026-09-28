@@ -1,0 +1,112 @@
+{
+  "index": 37,
+  "name": "Level 37",
+  "set": "progression_1_6",
+  "difficulty": "Medium",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      1,
+      null,
+      1,
+      null,
+      0
+    ],
+    [
+      0,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      1,
+      1,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      1,
+      null,
+      1,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  ]
+}

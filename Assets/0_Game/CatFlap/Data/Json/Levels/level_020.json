@@ -1,0 +1,182 @@
+{
+  "index": 20,
+  "name": "Level 20",
+  "set": "progression_1_6",
+  "difficulty": "Medium",
+  "size": 8,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+    ],
+    [
+      0,
+      null,
+      0,
+      null,
+      1,
+      null,
+      null,
+      1
+    ],
+    [
+      null,
+      null,
+      0,
+      null,
+      null,
+      0,
+      null,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      0,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      1,
+      0
+    ],
+    [
+      null,
+      1,
+      null,
+      null,
+      null,
+      0,
+      null,
+      1
+    ],
+    [
+      null,
+      1,
+      null,
+      null,
+      1,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      1,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "checkpoint": true,
+  "coach": {
+    "icon": "🚩",
+    "title": "Checkpoint — your first 8×8",
+    "body": "Eight to a line, so <b>4 Cats and 4 Fish</b> each. It looks like a lot of board, but there will always be several squares you can settle at a glance — start anywhere."
+  }
+}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200df0bc4754f4df7ad07b5371b99f07, type: 3}
+  m_Name: Cat_Idle2
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 51968238809488927, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 2605077121493296722, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 1373614579186118693, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 5041309208890399256, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -2821579130215314141, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -3756989440828041164, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -8962827365373425288, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 7991846631552430585, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -881829936584259587, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 5287377616156479344, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 5068596443055480044, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -458699531539543936, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 5062519916393698706, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 1728642470094931616, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 6615352000770575385, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 2386742333783541226, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -1365008234071299232, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 5010019640301315714, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -7602890977090803683, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -2629726198717386287, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 2252788800929119600, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -346418211879810391, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -2357176632618570437, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: -2576514871894972259, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  - {fileID: 6223750246316491564, guid: f71dd87552d5c4f4e9d526fa8294c554, type: 3}
+  framesPerSecond: 24
+  playContinuously: 0
+  holdLastFrame: 1
+  holdFrameIndex: -1
+  transitionSpeedMultiplier: 3
+  restBetweenPlays: {x: 0, y: 0}
+  artFitMultiplier: 1.15

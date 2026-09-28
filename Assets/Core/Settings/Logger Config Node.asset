@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Logger Config Node
+  m_EditorClassIdentifier: LoggerConfigurator:Coredian.FilteredLoggerConfigurator.Configuration:LoggerConfiguratorConfigNode
+  useThisConfig: 1
+  isUpToDateWithConfig: 1
+  googleSheetsCache:
+    url: 
+    sheetsNames: []
+    sheetsGuids: []
+    preferredSheet: 
+  releaseBuildFilterSettings:
+    outputType: Coredian.FilteredLogger.Output.UnityOutput
+    typeFilter: 6
+    autogenerateCategories: 0
+  devBuildFilterSettings:
+    outputType: Coredian.FilteredLogger.Output.UnityOutput
+    typeFilter: 2147483647
+    autogenerateCategories: 1
+  editorFilterSettings:
+    outputType: Coredian.FilteredLogger.Output.UnityOutput
+    typeFilter: 2147483647
+    autogenerateCategories: 1
+  predefinedCategories:
+    disableNameChanges: 1
+    disableCategoriesChanges: 0
+    name: Predefined Categories
+    categories: []
+  customCategories: []
+  groupedCategories: []

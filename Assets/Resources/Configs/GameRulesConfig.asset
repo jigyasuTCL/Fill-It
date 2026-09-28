@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509f26c036844b8ca8f71927d3bad500, type: 3}
+  m_Name: GameRulesConfig
+  m_EditorClassIdentifier: 
+  config:
+    LevelMistakeLimit: 3
+    WrongValidationDelaySeconds: 0.75
+    CorrectValidationDelaySeconds: 0.55
+    LastCellCorrectValidationDelaySeconds: 0.4
+    AutosaveIntervalSeconds: 5
+    BoosterInfoVisibleSeconds: 2
+    BoosterInfoFadeSeconds: 0.35
+    HintOneMissingLineText: 'Hint: completed the row/column with one cell left.'
+    HintMaxTwoAdjacentText: 'Hint: used the Max 2 Adjacent rule.'
+    HintLeastEmptyLineText: 'Hint: picked the row/column with fewer empty cells.'
+    HintRandomText: 'Hint: picked a random available cell.'
+    HintFallbackText: Hint revealed.
+    CellCompletedColor: {r: 0.82, g: 0.96, b: 0.86, a: 1}
+    CellErrorColor: {r: 1, g: 0.84, b: 0.84, a: 1}
+    CellWarningColor: {r: 1, g: 0.84, b: 0.42, a: 1}
+    MistakeBlinkColor: {r: 1, g: 0.24, b: 0.24, a: 1}
+    MistakeBlinkDurationSeconds: 0.45
+    MistakeBlinkCount: 3
+    HintHighlightIdleSeconds: 10

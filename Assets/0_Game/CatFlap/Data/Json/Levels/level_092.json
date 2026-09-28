@@ -1,0 +1,112 @@
+{
+  "index": 92,
+  "name": "Level 92",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      0,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+    ],
+    [
+      0,
+      null,
+      null,
+      null,
+      1,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ]
+  ]
+}

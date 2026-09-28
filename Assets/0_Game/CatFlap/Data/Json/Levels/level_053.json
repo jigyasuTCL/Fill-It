@@ -1,0 +1,181 @@
+{
+  "index": 53,
+  "name": "Level 53",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 8,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      null,
+      null,
+      null,
+      1,
+      0,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      0,
+      null,
+      null,
+      null,
+      1,
+      1,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+    ],
+    [
+      0,
+      null,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      0,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      null,
+      1,
+      0,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "coach": {
+    "icon": "⛰️",
+    "title": "The first of a pair",
+    "body": "An 8×8 at the third level of the block, and another at the fifth. The second of the two is always the harder one."
+  }
+}

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+	implementation fileTree(dir: '../../libs', include: ['*.jar'])
+}
+
+android {
+	namespace "com.coredian.unityclasses"
+	compileSdk 36
+	// Pinned to the only build-tools Unity ships with its bundled SDK (36.0.0). Without it AGP
+	// 8.10 falls back to its own default of 35.0.0, which is not installed - and the SDK lives
+	// under Program Files, so Gradle cannot install it or accept its licence either. The launcher
+	// and unityLibrary modules never hit this because Unity substitutes **BUILDTOOLS** into their
+	// templates; this module is hand-written and was not covered.
+	buildToolsVersion '36.0.0'
+	
+	defaultConfig {
+		minSdk 26
+		targetSdk 36
+	}
+	
+	lint {
+		abortOnError false
+	}
+	
+	sourceSets {
+		main {
+			java.srcDirs = ['../../src/main/java/com/unity3d/player']
+		}
+	}
+	
+	afterEvaluate {
+		if (project(':unityLibrary').tasks.findByName('buildIl2Cpp')) {
+			if (tasks.findByName('generateReleaseLintModel'))
+				tasks.findByName('generateReleaseLintModel').mustRunAfter project(':unityLibrary').tasks.findByName('buildIl2Cpp')
+			if (tasks.findByName('extractReleaseAnnotations'))
+				tasks.findByName('extractReleaseAnnotations').mustRunAfter project(':unityLibrary').tasks.findByName('buildIl2Cpp')
+		}
+	}
+}

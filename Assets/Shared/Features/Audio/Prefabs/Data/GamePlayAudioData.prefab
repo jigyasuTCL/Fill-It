@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &418911546926499657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7944808556233766036}
+  - component: {fileID: 6716341443048279893}
+  m_Layer: 0
+  m_Name: GamePlayAudioData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7944808556233766036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418911546926499657}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6716341443048279893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418911546926499657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa869e699c43d45f3afea6d101273c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundSceneData
+  soundDataList:
+  - name: LevelStart
+    clip: {fileID: 8300000, guid: 3d7abd1f4b7be9a4e884adc2a774c340, type: 3}
+    isActive: 1
+  - name: LevelComplete
+    clip: {fileID: 8300000, guid: 98cadc063701ac843bb881755f8d622b, type: 3}
+    isActive: 1
+  - name: LwinConfitti
+    clip: {fileID: 8300000, guid: d439793ca9aa64791b6e4d78e4a62fbf, type: 3}
+    isActive: 1
+  - name: LevelFail
+    clip: {fileID: 8300000, guid: 9d51df14075e640299a0563e2e58c9e6, type: 3}
+    isActive: 1
+  - name: CellCorrectMatch
+    clip: {fileID: 8300000, guid: cc7dd6c725c2241eeaee7745a761df4a, type: 3}
+    isActive: 1
+  - name: CellTap
+    clip: {fileID: 8300000, guid: bad64557bbfb4446e875ab70763c4d2f, type: 3}
+    isActive: 1
+  - name: CellWrongTap
+    clip: {fileID: 8300000, guid: 689ddff8dc3cb4e85b1d1d35829cb75b, type: 3}
+    isActive: 1
+  - name: ClickSound
+    clip: {fileID: 8300000, guid: ffd987c3296ca27458f5d0d864b95149, type: 3}
+    isActive: 1
+  - name: PopupOpen
+    clip: {fileID: 8300000, guid: f59c31c0deeeb874196281f6c6a10fa4, type: 3}
+    isActive: 1
+  - name: TapFish
+    clip: {fileID: 8300000, guid: e037feb82f45b6c4990fe563056f683a, type: 3}
+    isActive: 1
+  - name: TapCat
+    clip: {fileID: 8300000, guid: 40c76500c4baf72469e933ceec0346d8, type: 3}
+    isActive: 1
+  - name: TapEmpty
+    clip: {fileID: 8300000, guid: 33b2cdd3f663e7244b16e2bf76976e8e, type: 3}
+    isActive: 1
+  - name: LineComplete
+    clip: {fileID: 8300000, guid: f62db870b51c44e4e8c1e1d921e7da30, type: 3}
+    isActive: 1
+  - name: LineWrong
+    clip: {fileID: 8300000, guid: a063b18e709324a01b33f387963f5e9f, type: 3}
+    isActive: 1
+  - name: HintUsed
+    clip: {fileID: 8300000, guid: 95ba88be68c0461469e9a05bde53acd3, type: 3}
+    isActive: 1
+  - name: NotesUsed
+    clip: {fileID: 8300000, guid: 6be6687d3673da94eaf3d7b218f65350, type: 3}
+    isActive: 1
+  - name: UndoUsed
+    clip: {fileID: 8300000, guid: 244b97f7038e3664288c93c96c5b1a54, type: 3}
+    isActive: 1
+  - name: BoardTileAppear
+    clip: {fileID: 8300000, guid: 255bcab12de44ed4c94d506c44518cd2, type: 3}
+    isActive: 1
+  - name: BoardTilesIntro
+    clip: {fileID: 8300000, guid: 4dcdbc1c2fbba764ea1dedb892e00c2a, type: 3}
+    isActive: 1
+  - name: CellLockedTap
+    clip: {fileID: 8300000, guid: 97df08e0fbd0f734e9aae37f4953bc13, type: 3}
+    isActive: 1
+  - name: MoveErrorSoft
+    clip: {fileID: 8300000, guid: db9b4c92d0c1d834eb9713940eba5828, type: 3}
+    isActive: 1
+  - name: RuleBreakError
+    clip: {fileID: 8300000, guid: f3ae213d0db5fd4448e2ffd95616c1a3, type: 3}
+    isActive: 1
+  - name: LifeEmpty
+    clip: {fileID: 8300000, guid: f17b9b8a7e4e8a944b3476ab4ba15484, type: 3}
+    isActive: 1
+  - name: HeartLose
+    clip: {fileID: 8300000, guid: 1e83acd61e4a3fc4f99cff3cd68d0e5c, type: 3}
+    isActive: 1
+  - name: LevelCoinReward
+    clip: {fileID: 8300000, guid: d9a6c34643fe5c943a0b176e346a15bc, type: 3}
+    isActive: 1
+  - name: LevelStarTally
+    clip: {fileID: 8300000, guid: 97d67aff0783cc04587f250c30962349, type: 3}
+    isActive: 1
+  - name: LineCompleteDouble
+    clip: {fileID: 8300000, guid: e9fcd5c5539b97646b28d3ed842c8915, type: 3}
+    isActive: 1
+  - name: LineProgressHalf
+    clip: {fileID: 8300000, guid: 4b4229f45d842554dbc74c91ed43ce6d, type: 3}
+    isActive: 1
+  - name: ButtonBack
+    clip: {fileID: 8300000, guid: 05f8b65696b4e1142937f0a65effa1d0, type: 3}
+    isActive: 1
+  - name: ActionBlocked
+    clip: {fileID: 8300000, guid: bdc681ec04d302444a5dacfb8c8f9bfc, type: 3}
+    isActive: 1
+  - name: MenuMove
+    clip: {fileID: 8300000, guid: 985da8748d8bc074e98f0f823b00f926, type: 3}
+    isActive: 1
+  - name: ModalClose
+    clip: {fileID: 8300000, guid: bb48b19989f14e345b8581b29e3afcff, type: 3}
+    isActive: 1
+  - name: SolveStep
+    clip: {fileID: 8300000, guid: 7ced20abc02e0e14489d6f9ad724f7fb, type: 3}
+    isActive: 1
+  - name: ToggleOff
+    clip: {fileID: 8300000, guid: 48ade1320e681f943841e2aba4b4c5d1, type: 3}
+    isActive: 1
+  - name: ToggleOn
+    clip: {fileID: 8300000, guid: b7548a0678b152240aab36d4db36a73c, type: 3}
+    isActive: 1
+  - name: SpinTheWheel
+    clip: {fileID: 8300000, guid: 29b03c566f0441247b8621fc547e4cb1, type: 3}
+    isActive: 1
+  - name: CoinCollect
+    clip: {fileID: 8300000, guid: b8a83e344d61d4fdabb98706a66d6165, type: 3}
+    isActive: 1
+  - name: RewardScreen
+    clip: {fileID: 8300000, guid: 08fd0244352284de4b96c554aaa33f36, type: 3}
+    isActive: 1
+  - name: CollectReward
+    clip: {fileID: 8300000, guid: 5d738e4dd94124f7b87ba5f6fe78a5c8, type: 3}
+    isActive: 1
+  - name: HardLevelPopupOpen
+    clip: {fileID: 0}
+    isActive: 1
+  musicSoundDataList:
+  - name: GamePlayBg
+    clip: {fileID: 8300000, guid: 04162102f9777694290c5096ecbb8495, type: 3}
+    isActive: 1
+  - name: HardLevelBg
+    clip: {fileID: 8300000, guid: 1e8876a0bbc17441e862b9a384c18b3d, type: 3}
+    isActive: 1
+  - name: homebg
+    clip: {fileID: 8300000, guid: 811d3c29387ce734bab52c6269a80d82, type: 3}
+    isActive: 1

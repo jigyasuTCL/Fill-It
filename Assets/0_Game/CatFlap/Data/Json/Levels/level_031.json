@@ -1,0 +1,117 @@
+{
+  "index": 31,
+  "name": "Level 31",
+  "set": "progression_1_6",
+  "difficulty": "Medium",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      null,
+      1,
+      null,
+      0,
+      1
+    ],
+    [
+      null,
+      1,
+      null,
+      0,
+      1,
+      null
+    ],
+    [
+      null,
+      1,
+      0,
+      null,
+      null,
+      1
+    ],
+    [
+      1,
+      null,
+      null,
+      1,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      0,
+      null,
+      null
+    ],
+    [
+      0,
+      0,
+      null,
+      null,
+      0,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ]
+  ],
+  "coach": {
+    "icon": "🧠",
+    "title": "A third way to look",
+    "body": "When pairs and counters both stall, take a line with <b>three gaps</b> and run its endings in your head. There are eight at most, and the squares that agree in all of them are settled."
+  }
+}

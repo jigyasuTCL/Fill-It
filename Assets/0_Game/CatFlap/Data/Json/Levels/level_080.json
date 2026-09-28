@@ -1,0 +1,182 @@
+{
+  "index": 80,
+  "name": "Level 80",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 8,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      null,
+      0,
+      null,
+      1,
+      1,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      0,
+      null,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1
+    ],
+    [
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      0,
+      null,
+      0,
+      null,
+      0,
+      null,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "checkpoint": true,
+  "coach": {
+    "icon": "🚩",
+    "title": "Checkpoint",
+    "body": "Fifteen givens or fewer from here. Every square is still forced by a rule you can point at."
+  }
+}

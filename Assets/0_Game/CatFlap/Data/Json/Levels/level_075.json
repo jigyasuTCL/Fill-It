@@ -1,0 +1,182 @@
+{
+  "index": 75,
+  "name": "Level 75",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 8,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      1,
+      null,
+      null,
+      0,
+      0,
+      null,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      1
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      0,
+      null,
+      0,
+      0
+    ],
+    [
+      0,
+      null,
+      null,
+      null,
+      null,
+      0,
+      null,
+      0
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "checkpoint": true,
+  "coach": {
+    "icon": "🚩",
+    "title": "Checkpoint — halfway through the half",
+    "body": "Twenty-five to go. Longer, not trickier."
+  }
+}

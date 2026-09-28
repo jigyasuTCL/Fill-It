@@ -1,0 +1,37 @@
+{
+  "index": 3,
+  "name": "Level 3",
+  "set": "progression_1_6",
+  "difficulty": "Easy",
+  "size": 2,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      null
+    ],
+    [
+      null,
+      0
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "coach": {
+    "icon": "🐱",
+    "title": "Tap twice for a Cat",
+    "body": "These two squares want Cats 🐱. Tap once and you get a Fish — <b>tap again</b> and it turns into a Cat. A third tap empties the square, so nothing is ever stuck."
+  }
+}

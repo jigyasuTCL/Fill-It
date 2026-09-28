@@ -1,0 +1,182 @@
+{
+  "index": 60,
+  "name": "Level 60",
+  "set": "progression_1_8",
+  "difficulty": "Hard",
+  "size": 8,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      0,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    [
+      0,
+      null,
+      null,
+      null,
+      0,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      0,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      0,
+      0
+    ],
+    [
+      null,
+      null,
+      1,
+      null,
+      1,
+      1,
+      null,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "checkpoint": true,
+  "coach": {
+    "icon": "🚩",
+    "title": "Checkpoint",
+    "body": "Fewer givens than level 58. Read the short lines first and the rest opens up."
+  }
+}

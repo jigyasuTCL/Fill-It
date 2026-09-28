@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply from: 'setupSymbols.gradle'
+apply from: '../shared/keepUnitySymbols.gradle'
+
+dependencies {
+	implementation(group: 'com.android.support', name: 'multidex', version: '1.0.3')
+	implementation project(':unityLibrary')
+}
+
+Set<String> jarPickFirsts = [
+	'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties',
+	'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml',
+	'META-INF/maven/com.google.protobuf/protobuf-lite/pom.properties',
+	'META-INF/maven/com.google.protobuf/protobuf-lite/pom.xml',
+	'META-INF/maven/com.nineoldandroids/library/pom.properties',
+	'META-INF/maven/com.nineoldandroids/library/pom.xml',
+	'META-INF/services/com.fasterxml.jackson.core.ObjectCodec'
+]
+
+Set<String> jarExcludes = [
+	'assets/vg_close.png',
+	'assets/vg_cta.png',
+	'assets/vg_cta_disabled.png',
+	'assets/vg_mute_off.png',
+	'assets/vg_mute_on.png',
+	'assets/vg_privacy.png',
+	'assets/vg_timer.png',
+	'META-INF/license.txt',
+	'META-INF/notice.txt'
+]
+
+android {
+	namespace "**NAMESPACE**"
+	
+	ndkPath "**NDKPATH**"
+	ndkVersion "**NDKVERSION**"
+	
+	compileSdk **APIVERSION**
+	buildToolsVersion "**BUILDTOOLS**"
+	
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_17
+		targetCompatibility JavaVersion.VERSION_17
+	}
+	
+	defaultConfig {
+		minSdk **MINSDKVERSION**
+		targetSdk **TARGETSDKVERSION**
+		versionCode **VERSIONCODE**
+		versionName '**VERSIONNAME**'
+		ndk {
+			abiFilters **ABIFILTERS**
+			debugSymbolLevel **DEBUGSYMBOLLEVEL**
+		}
+		applicationId '**APPLICATIONID**'
+		multiDexEnabled true
+	}**SIGN**
+	
+	lint {
+		abortOnError false
+	}
+	
+	androidResources {
+		noCompress = **BUILTIN_NOCOMPRESS** + unityStreamingAssets.tokenize(', ')
+		ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+	}
+	
+	**PACKAGING**
+	packaging {
+		pickFirsts += jarPickFirsts
+		excludes += jarExcludes
+		exclude("META-INF/*.kotlin_module")
+	}
+	
+	buildTypes {
+		debug {
+			minifyEnabled **MINIFY_DEBUG**
+			proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+			jniDebuggable true
+		}
+		release {
+			minifyEnabled **MINIFY_RELEASE**
+			proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+		}
+	}
+	
+	bundle {
+		language {
+			enableSplit = false
+		}
+		density {
+			enableSplit = false
+		}
+		abi {
+			enableSplit = true
+		}
+		texture {
+			enableSplit = true
+		}
+	}
+	**PLAY_ASSET_PACKS**
+	**SPLITS**
+	**BUILT_APK_LOCATION**
+	**GOOGLE_PLAY_DEPENDENCIES**
+}
+**SPLITS_VERSION_CODE**
+**LAUNCHER_SOURCE_BUILD_SETUP**

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57a7aa084db341d7b39f3a048a92b16, type: 3}
+  m_Name: CoinCollectSettings
+  m_EditorClassIdentifier: 
+  currencyPerCoin: 2
+  maxCoins: 50
+  drainRewardNumberOnSpawn: 1
+  startDelay: 0.06
+  burstPaceScale: 1
+  burstRateRamp: 0.35
+  burstStaggerJitter: 0.25
+  burstSpawnScale: 0
+  holdScale: 1
+  burstArcFactor: 0.25
+  burstArcMin: 18
+  burstArcMax: 60
+  burstArcVariance: 0.3
+  burstSettleOvershoot: 0.5
+  burstRadiusMin: 100
+  burstRadiusMax: 215
+  burstVerticalSquash: 0.7
+  burstDownwardBias: 1
+  burstOffsetY: 0
+  holdDuration: 0
+  idleBobAmplitude: 9
+  idleBobDuration: 0.45
+  idleBobPeriodVariance: 0.1
+  streamSpan: 0.35
+  streamDuration: 0.25
+  streamRateRamp: 0.55
+  streamArc: 110
+  playParticlesOnBurst: 0
+  soundEveryNthCoin: 1
+  minSoundInterval: 0.0609

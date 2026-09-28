@@ -1,0 +1,69 @@
+{
+  "index": 9,
+  "name": "Level 9",
+  "set": "progression_1_6",
+  "difficulty": "Easy",
+  "size": 4,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      null,
+      1,
+      null
+    ],
+    [
+      null,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      null,
+      null,
+      0
+    ],
+    [
+      null,
+      null,
+      0,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "coach": {
+    "icon": "🚧",
+    "title": "Rule 2 — never three in a row",
+    "body": "The second and last rule. <b>Two of the same animal may sit side by side. Three may not.</b><br>So whenever you see a matching pair, the square touching it has to be the opposite animal. Every move on this board is that one idea."
+  }
+}

@@ -1,0 +1,404 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0df48bd60db444f87e29a7a73f0e09c, type: 3}
+  m_Name: GlobalConfig
+  m_EditorClassIdentifier: 
+  config:
+    TotalLevels: 100
+    InitialCoins: 100
+    LevelAdMultiplier: 2
+    NoAdsBeforeLevel: 5
+    LevelAttemptUnlockLevel: 8
+    FtueEnabledUntilLevel: 4
+    LevelExtraMovesCount: 3
+    LevelExtraMovesOnRevive: 3
+    LevelExtraTime: 30
+    HardLevels: 0f00000014000000190000001e00000023000000280000002d00000032000000370000003c00000041000000460000004b00000050000000550000005a0000005f00000064000000
+    LoopLevels:
+      EasyLevels: 15000000160000001a0000001b0000001f000000200000002400000025000000290000002a0000002e0000002f000000330000003400000038000000390000003d0000003e000000420000004300000047000000480000004c0000004d000000510000005200000056000000570000005b0000005c0000006000000061000000
+      MediumLevels: 17000000180000001c0000001d000000210000002200000026000000270000002b0000002c000000300000003100000035000000360000003a0000003b0000003f000000400000004400000045000000490000004a0000004e0000004f000000530000005400000058000000590000005d0000005e0000006200000063000000
+      HardLevels: 190000001e00000023000000280000002d00000032000000370000003c00000041000000460000004b00000050000000550000005a0000005f00000064000000
+      Pattern: 2e_2m_1h
+    BoosterConfigList:
+    - UnLockLevel: 0
+      UnLockCount: 3
+      BuyCoinCost: 200
+      BuyCount: 3
+      AdBuyCount: 1
+    - UnLockLevel: 6
+      UnLockCount: 3
+      BuyCoinCost: 200
+      BuyCount: 3
+      AdBuyCount: 1
+    - UnLockLevel: 10
+      UnLockCount: 3
+      BuyCoinCost: 200
+      BuyCount: 3
+      AdBuyCount: 1
+    ResumeSavedLevelOnPlay: 1
+    RestoreCurrentBoardOnLoad: 1
+    CurrentLevelIndexSaveKey: CatFlap.CurrentLevelIndex
+    BoardStateSaveKeyPrefix: CatFlap.Board.
+    DailyChallenge:
+      Enabled: 1
+      UnlockLevel: 16
+      NewLevelUnlockHours: 24
+      TotalLevels: 40
+      TotalSubLevels: 1
+      LevelWinCoins: 25
+      RewardTiers:
+      - DaysRequired: 4
+        RewardCoins: 50
+        IconId: Reward1
+      - DaysRequired: 10
+        RewardCoins: 100
+        IconId: Reward2
+      - DaysRequired: 20
+        RewardCoins: 150
+        IconId: Reward3
+      - DaysRequired: 25
+        RewardCoins: 200
+        IconId: Reward_Fin
+    SpinTheWheel:
+      Enabled: 1
+      UnlockLevel: 6
+      Stages:
+      - SpinIndex: 1
+        WinsRequired: 5
+        IsFree: 1
+        IsCapStage: 0
+      - SpinIndex: 2
+        WinsRequired: 5
+        IsFree: 0
+        IsCapStage: 0
+      - SpinIndex: 3
+        WinsRequired: 7
+        IsFree: 0
+        IsCapStage: 0
+      - SpinIndex: 4
+        WinsRequired: 7
+        IsFree: 0
+        IsCapStage: 0
+      - SpinIndex: 5
+        WinsRequired: 7
+        IsFree: 0
+        IsCapStage: 0
+      - SpinIndex: 6
+        WinsRequired: 10
+        IsFree: 0
+        IsCapStage: 1
+      RewardTables:
+      - TableId: EarlyGame
+        Rewards:
+        - RewardId: coins_5_a
+          Type: 0
+          Amount: 10
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coin
+        - RewardId: coins_5_b
+          Type: 0
+          Amount: 15
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coin
+        - RewardId: coins_10
+          Type: 0
+          Amount: 25
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins
+        - RewardId: coins_100
+          Type: 0
+          Amount: 25
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins2
+        - RewardId: coins_50
+          Type: 0
+          Amount: 50
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins
+        - RewardId: coins_150
+          Type: 0
+          Amount: 100
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins2
+      - TableId: Tier2
+        Rewards:
+        - RewardId: coins_10_a
+          Type: 0
+          Amount: 10
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coin
+        - RewardId: coins_25
+          Type: 0
+          Amount: 25
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins
+        - RewardId: coins_200
+          Type: 0
+          Amount: 200
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins2
+        - RewardId: coins_300
+          Type: 0
+          Amount: 300
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins2
+        - RewardId: coins_400
+          Type: 0
+          Amount: 400
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins2
+        - RewardId: coins_500
+          Type: 0
+          Amount: 500
+          BoosterId: 
+          Weight: 0
+          RewardIconKey: icon_coins3
+    DailyReward:
+      enableRestriction: 1
+      unlockLevel: 1
+      cooldownMinutes: 60
+      mainRewards:
+      - id: daily_main_0
+        type: coins
+        amount: 10
+        iconKey: icon_coins2
+        requireType: 0
+      subCooldownMinutes: 720
+      NotificationMinutes: 360
+      subRewardSets:
+      - subRewards:
+        - id: sub_0
+          type: coins
+          amount: 25
+          iconKey: icon_coin
+          requireType: 1
+        - id: sub_1
+          type: coins
+          amount: 45
+          iconKey: icon_coins
+          requireType: 1
+        - id: sub_2
+          type: coins
+          amount: 60
+          iconKey: icon_coins2
+          requireType: 1
+        - id: sub_3
+          type: coins
+          amount: 100
+          iconKey: icon_coins3
+          requireType: 1
+    Leaderboard:
+      Enabled: 1
+      UnlockLevel: 8
+      RivalCount: 19
+      BasePointsPerHour: 0.8
+      MinRateMultiplier: 0.25
+      MaxRateMultiplier: 1.9
+      MaxCatchUpHours: 48
+      FirstRunSpreadPoints: 14
+      AnchoredRivalCount: 10
+      CycleHours: 24
+      Bots:
+        Presets:
+        - Name: grinder
+          WeightPercent: 8
+          BurstsPerDay:
+            Min: 3
+            Max: 3
+          LevelsPerBurst:
+            Min: 2
+            Max: 3
+          PaceSeconds:
+            Min: 100
+            Max: 165
+          Skill:
+            Min: 2.35
+            Max: 2.85
+          FirstWakeHours:
+            Min: 0
+            Max: 3
+        - Name: steady
+          WeightPercent: 26
+          BurstsPerDay:
+            Min: 2
+            Max: 3
+          LevelsPerBurst:
+            Min: 1
+            Max: 3
+          PaceSeconds:
+            Min: 110
+            Max: 190
+          Skill:
+            Min: 2
+            Max: 2.6
+          FirstWakeHours:
+            Min: 0
+            Max: 5
+        - Name: casual
+          WeightPercent: 38
+          BurstsPerDay:
+            Min: 1
+            Max: 2
+          LevelsPerBurst:
+            Min: 1
+            Max: 2
+          PaceSeconds:
+            Min: 130
+            Max: 220
+          Skill:
+            Min: 1.6
+            Max: 2.3
+          FirstWakeHours:
+            Min: 0
+            Max: 8
+        - Name: dipper
+          WeightPercent: 20
+          BurstsPerDay:
+            Min: 1
+            Max: 1
+          LevelsPerBurst:
+            Min: 1
+            Max: 2
+          PaceSeconds:
+            Min: 150
+            Max: 250
+          Skill:
+            Min: 1.35
+            Max: 2.1
+          FirstWakeHours:
+            Min: 0
+            Max: 10
+        - Name: sleeper
+          WeightPercent: 8
+          BurstsPerDay:
+            Min: 1
+            Max: 2
+          LevelsPerBurst:
+            Min: 1
+            Max: 3
+          PaceSeconds:
+            Min: 120
+            Max: 200
+          Skill:
+            Min: 1.85
+            Max: 2.5
+          FirstWakeHours:
+            Min: 8
+            Max: 14
+        Rubberband:
+        - Preset: grinder
+          LevelsPerBurst:
+            Min: 1
+            Max: 1
+          PaceSeconds:
+            Min: 260
+            Max: 400
+        - Preset: steady
+          LevelsPerBurst:
+            Min: 1
+            Max: 1
+          PaceSeconds:
+            Min: 260
+            Max: 500
+        - Preset: casual
+          LevelsPerBurst:
+            Min: 1
+            Max: 1
+          PaceSeconds:
+            Min: 360
+            Max: 400
+        - Preset: dipper
+          LevelsPerBurst:
+            Min: 1
+            Max: 1
+          PaceSeconds:
+            Min: 560
+            Max: 800
+        - Preset: sleeper
+          LevelsPerBurst:
+            Min: 1
+            Max: 1
+          PaceSeconds:
+            Min: 360
+            Max: 500
+        ArrivalWindows: []
+        BotsStart: 10
+        BotsMax: 50
+        JoinCurve:
+        - Hour: 0
+          Count: 10
+        - Hour: 1
+          Count: 18
+        - Hour: 5
+          Count: 26
+        - Hour: 11
+          Count: 36
+        - Hour: 19
+          Count: 45
+        - Hour: 24
+          Count: 50
+        CurveReferenceHours: 24
+        JoinBatchSize:
+          Min: 1
+          Max: 3
+        LastJoinBeforeEndMinutes: 60
+        DayHours: 24
+        MinAwayHours: 2
+        WakeLeadSeconds:
+          Min: 30
+          Max: 180
+        JoinerFirstWakeMinutes:
+          Min: 0
+          Max: 30
+        OnlineTailMinutes: 5
+        StartingBotsLastSeenHours:
+          Min: 1
+          Max: 8
+        RubberbandAfterHours: 3
+        NamedBotRatio: 0.3
+      Rewards:
+      - Rank: 1
+        Rewards:
+        - Kind: 0
+          Amount: 500
+          ItemId: 
+          IconKey: icon_coins3
+        - Kind: 0
+          Amount: 500
+          ItemId: 
+          IconKey: icon_coins3
+      - Rank: 2
+        Rewards:
+        - Kind: 0
+          Amount: 300
+          ItemId: 
+          IconKey: icon_coins2
+      - Rank: 3
+        Rewards:
+        - Kind: 0
+          Amount: 150
+          ItemId: 
+          IconKey: icon_coins
+    Profile:
+      Enabled: 1
+      UnlockLevel: 0

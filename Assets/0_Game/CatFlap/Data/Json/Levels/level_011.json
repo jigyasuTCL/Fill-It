@@ -1,0 +1,117 @@
+{
+  "index": 11,
+  "name": "Level 11",
+  "set": "progression_1_6",
+  "difficulty": "Easy",
+  "size": 6,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      null,
+      1,
+      0,
+      null,
+      0,
+      null
+    ],
+    [
+      null,
+      1,
+      0,
+      null,
+      0,
+      null
+    ],
+    [
+      0,
+      null,
+      null,
+      0,
+      null,
+      1
+    ],
+    [
+      null,
+      0,
+      null,
+      null,
+      null,
+      1
+    ],
+    [
+      0,
+      null,
+      1,
+      0,
+      null,
+      null
+    ],
+    [
+      0,
+      null,
+      null,
+      0,
+      1,
+      null
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  ],
+  "coach": {
+    "icon": "📐",
+    "title": "A bigger board, the same two rules",
+    "body": "Six squares to a line now, so each needs <b>3 Cats and 3 Fish</b>. Fewer squares are filled in than you are used to — but every one that is there was put where it helps most."
+  }
+}

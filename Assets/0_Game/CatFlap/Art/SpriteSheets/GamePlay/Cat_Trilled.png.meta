@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: 8b76df4c17a854a4caa682f152406893
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1733515993011977578
+    second: Cat_Trilled_25
+  - first:
+      213: -3438803351352679104
+    second: Cat_Trilled_26
+  - first:
+      213: 2485101183185930902
+    second: Cat_Trilled_27
+  - first:
+      213: -3831186313642878871
+    second: Cat_Trilled_28
+  - first:
+      213: -6397942513403689648
+    second: Cat_Trilled_29
+  - first:
+      213: -7690302426144465906
+    second: Cat_Trilled_30
+  - first:
+      213: 2367088073945053
+    second: Cat_Trilled_31
+  - first:
+      213: -576881173462763480
+    second: Cat_Trilled_32
+  - first:
+      213: 7732917770179499601
+    second: Cat_Trilled_33
+  - first:
+      213: -7140220896749341182
+    second: Cat_Trilled_34
+  - first:
+      213: 3262447647015142175
+    second: Cat_Trilled_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cat_Trilled_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 822
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e67200aa9277d750800000000000000
+      internalID: 6329653809727567588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 620
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af06c09f2201dba0800000000000000
+      internalID: -6066064819775729757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0d74a48714f4180800000000000000
+      internalID: -9129005934758604604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7138ecfb103e4dcc0800000000000000
+      internalID: -3687072598257138921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c5d58e957377d80800000000000000
+      internalID: -8253066932843095032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_10
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 822
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942ee273a6bedea40800000000000000
+      internalID: 5399230369711972937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_11
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 822
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce6fecd52480c2f0800000000000000
+      internalID: -954617822847209784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_12
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 822
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c040075117623bf0800000000000000
+      internalID: -346100897182367547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_17
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 822
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d714f56c0ceaf30800000000000000
+      internalID: 4588817028571299085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 620
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a34c303712b83500800000000000000
+      internalID: 376246381548684201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_22
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 418
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c50d17940def750800000000000000
+      internalID: 6340734339244907663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_23
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 216
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3d35c45164490c0800000000000000
+      internalID: -4569950664585391163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 14
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ba682ebf920a560800000000000000
+      internalID: 7322899155918433156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_25
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 620
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6dffef6c9fae0810800000000000000
+      internalID: 1733515993011977578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_26
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 620
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045633e429ae640d0800000000000000
+      internalID: -3438803351352679104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_27
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 620
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a43b60c5adc7220800000000000000
+      internalID: 2485101183185930902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_28
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 418
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9685af2a854e4dac0800000000000000
+      internalID: -3831186313642878871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_29
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 216
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055043b8e21f537a0800000000000000
+      internalID: -6397942513403689648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_30
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 14
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c955a30be864590800000000000000
+      internalID: -7690302426144465906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_31
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 418
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfacc3aad8680000800000000000000
+      internalID: 2367088073945053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_32
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 418
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828342211a18ef7f0800000000000000
+      internalID: -576881173462763480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_33
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 216
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156dad0cdb7d05b60800000000000000
+      internalID: 7732917770179499601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_34
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 14
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2063f67cce6d8ec90800000000000000
+      internalID: -7140220896749341182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Trilled_35
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 216
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1385aa89da864d20800000000000000
+      internalID: 3262447647015142175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cat_Trilled_0: 6329653809727567588
+      Cat_Trilled_1: 537419536931303725
+      Cat_Trilled_10: 5399230369711972937
+      Cat_Trilled_11: -954617822847209784
+      Cat_Trilled_12: -346100897182367547
+      Cat_Trilled_13: 614620265554318660
+      Cat_Trilled_14: 6369985709359446234
+      Cat_Trilled_15: -1362882647500953022
+      Cat_Trilled_16: -7513055615403124868
+      Cat_Trilled_17: 4588817028571299085
+      Cat_Trilled_18: 6139676231919744381
+      Cat_Trilled_19: 8027969911183690442
+      Cat_Trilled_2: -6655843638792705315
+      Cat_Trilled_20: 376246381548684201
+      Cat_Trilled_21: 8314060214896383066
+      Cat_Trilled_22: 6340734339244907663
+      Cat_Trilled_23: -4569950664585391163
+      Cat_Trilled_24: 7322899155918433156
+      Cat_Trilled_25: 1733515993011977578
+      Cat_Trilled_26: -3438803351352679104
+      Cat_Trilled_27: 2485101183185930902
+      Cat_Trilled_28: -3831186313642878871
+      Cat_Trilled_29: -6397942513403689648
+      Cat_Trilled_3: -4459433604949890511
+      Cat_Trilled_30: -7690302426144465906
+      Cat_Trilled_31: 2367088073945053
+      Cat_Trilled_32: -576881173462763480
+      Cat_Trilled_33: 7732917770179499601
+      Cat_Trilled_34: -7140220896749341182
+      Cat_Trilled_35: 3262447647015142175
+      Cat_Trilled_4: -6066064819775729757
+      Cat_Trilled_5: -9129005934758604604
+      Cat_Trilled_6: -3557247210206038390
+      Cat_Trilled_7: -3687072598257138921
+      Cat_Trilled_8: 3240514357620314363
+      Cat_Trilled_9: -8253066932843095032
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

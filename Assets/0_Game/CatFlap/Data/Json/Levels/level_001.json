@@ -1,0 +1,37 @@
+{
+  "index": 1,
+  "name": "Level 1",
+  "set": "progression_1_6",
+  "difficulty": "Easy",
+  "size": 2,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      1,
+      null
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "coach": {
+    "icon": "👆",
+    "title": "One tap places a Fish",
+    "body": "Three squares are already filled. <b>Tap the empty one once</b> and a Fish 🐟 appears. That is the whole game — tapping squares."
+  }
+}

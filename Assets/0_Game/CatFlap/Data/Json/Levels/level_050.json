@@ -1,0 +1,182 @@
+{
+  "index": 50,
+  "name": "Level 50",
+  "set": "progression_1_6",
+  "difficulty": "Hard",
+  "size": 8,
+  "rules": {
+    "equalCounts": true,
+    "maxTwoAdjacent": true,
+    "uniqueLines": false
+  },
+  "clues": [
+    [
+      0,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+    ],
+    [
+      1,
+      null,
+      null,
+      null,
+      0,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      0,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      null
+    ],
+    [
+      1,
+      null,
+      1,
+      1,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      1,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "checkpoint": true,
+  "coach": {
+    "icon": "🏁",
+    "title": "Checkpoint — halfway",
+    "body": "Fifty down. Twelve 8×8 boards behind you already, and from here they settle back to one every fifth level."
+  }
+}

@@ -1,0 +1,729 @@
+fileFormatVersion: 2
+guid: 288f008474a7b4dc0b2e3cd18572f06e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cat_Fail_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1650
+        width: 297
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5218855, y: 0.50125945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04465067e45e06160800000000000000
+      internalID: 7016860344593507392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1649
+        width: 297
+        height: 398
+      alignment: 9
+      pivot: {x: 0.5218855, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62d5c18a0904e680800000000000000
+      internalID: -8726840237205630355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1650
+        width: 301
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5282392, y: 0.50125945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364e967c245027550800000000000000
+      internalID: 6156989424940475491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_3
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1647
+        width: 291
+        height: 400
+      alignment: 9
+      pivot: {x: 0.50859106, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc3eb88b69bb4550800000000000000
+      internalID: 6146209987983981808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_4
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1651
+        width: 294
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5170068, y: 0.50252527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c83b38a5f3015e0800000000000000
+      internalID: -1940981781407495066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_5
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1657
+        width: 291
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5120275, y: 0.5102564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a127a5a6f998f5d0800000000000000
+      internalID: -3028501464786460249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1245
+        width: 298
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5201342, y: 0.50125945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd098d70b2c46b80800000000000000
+      internalID: -8402376941490336298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_7
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1246
+        width: 308
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5032467, y: 0.50252527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d948c8046a7ec0370800000000000000
+      internalID: 8290255715315778717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_8
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1245
+        width: 319
+        height: 397
+      alignment: 9
+      pivot: {x: 0.51724136, y: 0.50125945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbcdc1f346a2ed00800000000000000
+      internalID: 1000544877979487223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_9
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1246
+        width: 309
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5404531, y: 0.50252527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e9d93d2db135bb0800000000000000
+      internalID: -4948580973242638728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_10
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1238
+        width: 297
+        height: 404
+      alignment: 9
+      pivot: {x: 0.5252525, y: 0.49752474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfe2be3a5a5f65c0800000000000000
+      internalID: -4220054982177394723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_11
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1241
+        width: 307
+        height: 401
+      alignment: 9
+      pivot: {x: 0.514658, y: 0.49625936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a62f71d59a31e0a0800000000000000
+      internalID: -6854132742741875038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 842
+        width: 307
+        height: 395
+      alignment: 9
+      pivot: {x: 0.495114, y: 0.5037975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d736369f26e11280800000000000000
+      internalID: -9074218682116851752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_13
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 834
+        width: 303
+        height: 403
+      alignment: 9
+      pivot: {x: 0.48844886, y: 0.49627793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd7bfdc7b3ba5b60800000000000000
+      internalID: 7735692911978446283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_14
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 835
+        width: 296
+        height: 402
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49751243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4665f6e7dae8992a0800000000000000
+      internalID: -6730191292326783388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_15
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 834
+        width: 295
+        height: 403
+      alignment: 9
+      pivot: {x: 0.5016949, y: 0.49627793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcbc6aab3cea2f3f0800000000000000
+      internalID: -868439622455735347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_16
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 836
+        width: 295
+        height: 401
+      alignment: 9
+      pivot: {x: 0.5016949, y: 0.49625936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f80e09b894093230800000000000000
+      internalID: 3618928829555149040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_17
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 835
+        width: 294
+        height: 402
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0.4950249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5875d936142b5e700800000000000000
+      internalID: 569056921846110085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 433
+        width: 315
+        height: 399
+      alignment: 9
+      pivot: {x: 0.53650796, y: 0.49373433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8227e82d76929bf90800000000000000
+      internalID: -6937468225096617432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_19
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 442
+        width: 303
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5313531, y: 0.50769234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c675a84a24d89e5d0800000000000000
+      internalID: -3032737556689430676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_20
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 436
+        width: 301
+        height: 396
+      alignment: 9
+      pivot: {x: 0.52491695, y: 0.50252527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4965e2b230f2adb0800000000000000
+      internalID: -4781995753773635249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_21
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 436
+        width: 291
+        height: 396
+      alignment: 9
+      pivot: {x: 0.50859106, y: 0.50252527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e2ecb70f5a21710800000000000000
+      internalID: 1662573664740978271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_22
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 439
+        width: 305
+        height: 393
+      alignment: 9
+      pivot: {x: 0.4918033, y: 0.5063613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3a1349ffc2f46f0800000000000000
+      internalID: -698289941004573717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_23
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 431
+        width: 313
+        height: 401
+      alignment: 9
+      pivot: {x: 0.5079872, y: 0.49625936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3c0382f4520c260800000000000000
+      internalID: 7115728433152312274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Fail_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 30
+        width: 299
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5250836, y: 0.49874055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0fc28125fe39140800000000000000
+      internalID: 4725383569913737376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cat_Fail_0: 7016860344593507392
+      Cat_Fail_1: -8726840237205630355
+      Cat_Fail_10: -4220054982177394723
+      Cat_Fail_11: -6854132742741875038
+      Cat_Fail_12: -9074218682116851752
+      Cat_Fail_13: 7735692911978446283
+      Cat_Fail_14: -6730191292326783388
+      Cat_Fail_15: -868439622455735347
+      Cat_Fail_16: 3618928829555149040
+      Cat_Fail_17: 569056921846110085
+      Cat_Fail_18: -6937468225096617432
+      Cat_Fail_19: -3032737556689430676
+      Cat_Fail_2: 6156989424940475491
+      Cat_Fail_20: -4781995753773635249
+      Cat_Fail_21: 1662573664740978271
+      Cat_Fail_22: -698289941004573717
+      Cat_Fail_23: 7115728433152312274
+      Cat_Fail_24: 4725383569913737376
+      Cat_Fail_25: -2855624740863494477
+      Cat_Fail_26: 242685455579956170
+      Cat_Fail_27: 6053062921586635043
+      Cat_Fail_28: -5379084909173701833
+      Cat_Fail_29: -1380173738351441473
+      Cat_Fail_3: 6146209987983981808
+      Cat_Fail_30: -7977211733310733269
+      Cat_Fail_31: -3204928537304695293
+      Cat_Fail_32: 5064550938270541538
+      Cat_Fail_33: 5973017574925218976
+      Cat_Fail_34: -4097734381190030783
+      Cat_Fail_35: -4075040574694902339
+      Cat_Fail_4: -1940981781407495066
+      Cat_Fail_5: -3028501464786460249
+      Cat_Fail_6: -8402376941490336298
+      Cat_Fail_7: 8290255715315778717
+      Cat_Fail_8: 1000544877979487223
+      Cat_Fail_9: -4948580973242638728
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

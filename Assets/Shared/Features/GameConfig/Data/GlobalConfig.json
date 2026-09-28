@@ -1,0 +1,41 @@
+{
+  "gameJoinCoins": 100,
+  "levelWinCoins": 200,
+  "levelReviveCoins": 0,
+  "outOfLivesRefillCoins": 100,
+  "levelAdMultiplier": 2,
+  "levelExtraMovesCount": 3,
+  "levelExtraMovesOnRevive": 3,
+  "levelExtraTime": 30,
+  "totalLevels": 100,
+  "hardLevels": [],
+  "loopLevels": {
+    "easyLevels": [],
+    "mediumLevels": [],
+    "hardLevels": []
+  },
+  "boosterConfigList": [
+    {
+      "unLockLevel": 5,
+      "unLockCount": 3,
+      "buyCoinCost": 50,
+      "buyCount": 3
+    },
+    {
+      "unLockLevel": 7,
+      "unLockCount": 3,
+      "buyCoinCost": 75,
+      "buyCount": 3
+    },
+    {
+      "unLockLevel": 10,
+      "unLockCount": 3,
+      "buyCoinCost": 100,
+      "buyCount": 3
+    }
+  ],
+  "resumeSavedLevelOnPlay": true,
+  "restoreCurrentBoardOnLoad": true,
+  "currentLevelIndexSaveKey": "CatFlap.CurrentLevelIndex",
+  "boardStateSaveKeyPrefix": "CatFlap.Board."
+}

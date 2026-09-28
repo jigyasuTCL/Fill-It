@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:versionCode="0">
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" tools:node="remove" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+  <application android:name="com.coredian.BoomBitApplication" android:largeHeap="false" android:theme="@style/UnityThemeSelector" android:debuggable="false" android:usesCleartextTraffic="true" android:allowBackup="false" android:fullBackupContent="false" tools:replace="android:allowBackup,android:fullBackupContent,android:theme,android:enableOnBackInvokedCallback,android:name" android:appCategory="game">
+    <activity android:name="com.unity3d.player.appui.AppUIActivity" android:label="@string/app_name" android:screenOrientation="sensor" android:launchMode="singleInstance" android:hardwareAccelerated="false" android:exported="true" android:theme="@style/UnityThemeSelector">
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+      <intent-filter android:autoVerify="false">
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter android:autoVerify="false">
+        <action android:name="com.boombit.LAUNCH" />
+      </intent-filter>
+    </activity>
+    <activity android:name="com.facebook.unity.FBUnityLoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:hardwareAccelerated="false" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:exported="false" />
+    <activity android:name="com.facebook.unity.FBUnityDialogsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:hardwareAccelerated="false" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:exported="false" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb1080066517732882" />
+    <meta-data android:name="com.facebook.sdk.ClientToken" android:value="1c18b7d1903934508dc39e5c3d55fafb" />
+    <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false" />
+    <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false" />
+    <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION" android:value="true" />
+    <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING" android:value="true" />
+    <meta-data android:name="com.coredian.privacy.usercentrics.LOGGER_LEVEL" android:value="0" />
+    <meta-data android:name="com.coredian.privacy.usercentrics.RULE_SET_ID" android:value="_g89G9M9IS6ddq" />
+    <meta-data android:name="firebase_analytics_collection_enabled" android:value="false" />
+    <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="false" />
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-2129001407304490~5248963370" />
+    <meta-data android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT" android:value="False" />
+    <meta-data android:name="com.google.unity.ads.UNITY_VERSION" android:value="6000.0.68f1" />
+    <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider1080066517732882" android:exported="true" android:grantUriPermissions="false" />
+    <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="com.mangra.catflap.firebaseinitprovider" android:exported="false" android:grantUriPermissions="false" />
+  </application>
+  <queries>
+    <intent android:autoVerify="false">
+      <action android:name="com.boombit.LAUNCH" />
+    </intent>
+  </queries>
+  <uses-permission android:name="android.permission.VIBRATE" />
+</manifest>
