@@ -1,0 +1,10 @@
+{
+    "id": "dc_32_1",
+    "name": "Daily Challenge 32",
+    "difficulty": "Medium",
+    "size": 7,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 165,
+    "clues": "0002037/2000070/4620700/0020073/4330050/0200600/1012500",
+    "solution": "2662337/2662377/4626777/4626673/4336653/4232653/1212555"
+}

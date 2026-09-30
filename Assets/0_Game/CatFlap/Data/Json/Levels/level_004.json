@@ -1,69 +1,10 @@
 {
-  "index": 4,
-  "name": "Level 4",
-  "set": "progression_1_6",
-  "difficulty": "Easy",
-  "size": 4,
-  "rules": {
-    "equalCounts": true,
-    "maxTwoAdjacent": true,
-    "uniqueLines": false
-  },
-  "clues": [
-    [
-      1,
-      1,
-      0,
-      0
-    ],
-    [
-      null,
-      null,
-      1,
-      1
-    ],
-    [
-      0,
-      0,
-      1,
-      1
-    ],
-    [
-      1,
-      null,
-      0,
-      0
-    ]
-  ],
-  "solution": [
-    [
-      1,
-      1,
-      0,
-      0
-    ],
-    [
-      0,
-      0,
-      1,
-      1
-    ],
-    [
-      0,
-      0,
-      1,
-      1
-    ],
-    [
-      1,
-      1,
-      0,
-      0
-    ]
-  ],
-  "coach": {
-    "icon": "🔀",
-    "title": "One of each",
-    "body": "A bigger board, but only two squares to fill: one wants a Fish 🐟, one wants a Cat 🐱. The counters beside each line tell you which is missing."
-  }
+    "id": "level_004",
+    "name": "Level 4",
+    "difficulty": "Easy",
+    "size": 4,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 45,
+    "clues": "2034/4430/0204/4000",
+    "solution": "2234/4434/4234/4214"
 }

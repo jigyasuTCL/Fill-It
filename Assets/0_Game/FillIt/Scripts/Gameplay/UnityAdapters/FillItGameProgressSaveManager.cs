@@ -1,16 +1,15 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Shared.PlayerData;
-using CatFlap.Runtime;
 using Shared.Boosters;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
-    public sealed class CatFlapGameProgressSaveManager : MonoBehaviour
+    public sealed class FillItGameProgressSaveManager : MonoBehaviour
     {
-        [SerializeField] private string currentLevelIndexKey = "CatFlap.CurrentLevelIndex";
-        [SerializeField] private string loopLevelSequenceKey = "CatFlap.LoopLevel.Sequence";
+        [SerializeField] private string currentLevelIndexKey = "FillIt.CurrentLevelIndex";
+        [SerializeField] private string loopLevelSequenceKey = "FillIt.LoopLevel.Sequence";
         [SerializeField] private string playerDataFileName = PlayerDataDefaults.FileName;
         [SerializeField] private string boosterCountKeyPrefix = PlayerDataDefaults.BoosterCountKeyPrefix;
 
@@ -57,14 +56,14 @@ namespace CatFlap.UnityAdapters
             SavePlayerData(data);
         }
 
-        public void SaveProgress(int currentLevelIndex, CatFlapRuntimeSession session)
+        public void SaveProgress(int currentLevelIndex, BoosterWallet wallet)
         {
             PlayerData data = LoadPlayerData();
             ApplyLevelIndex(data, currentLevelIndex);
-            if (session != null && session.BoosterWallet != null)
+            if (wallet != null)
             {
-                data.TotalCoins = Mathf.Max(0, session.BoosterWallet.CurrentCoins);
-                SaveBoosterCounts(data, session.BoosterWallet);
+                data.TotalCoins = Mathf.Max(0, wallet.CurrentCoins);
+                SaveBoosterCounts(data, wallet);
             }
 
             SavePlayerData(data);
@@ -88,8 +87,8 @@ namespace CatFlap.UnityAdapters
         }
 
         // Loop-level sequence: the concrete, already-shuffled level numbers resolved so far for
-        // loop content past GlobalConfig.TotalLevels (see CatFlapLoopLevelSequencer/
-        // CatFlapGameplayManager.ResolveLoopLevelNumber). Persisted as plain JSON so re-entering
+        // loop content past GlobalConfig.TotalLevels (see FillItLoopLevelSequencer/
+        // FillItGameplayManager.ResolveLoopLevelNumber). Persisted as plain JSON so re-entering
         // the same loop index always resolves to the exact same level instead of reshuffling.
         public List<int> LoadLoopLevelSequence()
         {

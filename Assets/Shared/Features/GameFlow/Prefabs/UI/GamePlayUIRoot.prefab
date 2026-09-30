@@ -797,11 +797,6 @@ MonoBehaviour:
   ftueController: {fileID: 2401651678069601569}
   boardView: {fileID: 0}
   advanceDelaySeconds: 0.5
-  rulesBannerMoveDurationSeconds: 0.8
-  rulesBannerTargetScale: 0.75
-  rulesBannerFadeToAlpha: 0.5
-  rulesRevealHoldSeconds: 0.6
-  rulesWalkthroughOverlayDimAlpha: 0.98039216
 --- !u!1 &942221780908247721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,7 +2334,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: ApplyActiveHint
         m_Mode: 1
         m_Arguments:
@@ -5927,16 +5922,7 @@ MonoBehaviour:
   animator: {fileID: 2958537923876033481}
   iconImage: {fileID: 3973506476000951201}
   descriptionLabel: {fileID: 7475797031675078758}
-  fishIconSprite: {fileID: 21300000, guid: e06de5afb751b40acb501522e87a130b, type: 3}
-  catIconSprite: {fileID: 21300000, guid: 0da14a0f7232445bbb22073327a090f5, type: 3}
-  fishName: Fish
-  catName: Cat
-  unlocksForcedCellsFormat: Placing {0} here unlocks more forced cells nearby.
-  oneMissingLineFormat: This line just needs one more {0} to complete it.
-  maxTwoAdjacentFormat: Two adjacent cells already have {1} - place {0} here to fix
-    it.
-  leastEmptyLineFormat: This row/column has the fewest empty cells left - try {0}
-    here.
+  valueLabel: {fileID: 0}
   fallbackFormat: Place {0} here to help complete a line.
 --- !u!1 &6887665876826211706
 GameObject:
@@ -7014,15 +7000,12 @@ MonoBehaviour:
   reviveScaleUpAmount: 1.25
   heartBreakVfxPrefab: {fileID: 3696084384914307124, guid: ef86e006f0e0842a79fcb673e9805601, type: 3}
   heartBreakVfxLifetimeSeconds: 1
-  equalCountsRuleIcon: {fileID: 0}
-  maxTwoAdjacentRuleIcon: {fileID: 0}
-  uniqueLinesRuleIcon: {fileID: 0}
-  equalCountsRuleOutline: {fileID: 2031895494146462726}
-  maxTwoAdjacentRuleOutline: {fileID: 3645777813234368431}
-  uniqueLinesRuleOutline: {fileID: 4444636418673559259}
-  equalCountsRuleRoot: {fileID: 7071490973521784664}
-  maxTwoAdjacentRuleRoot: {fileID: 6199006093973954689}
-  uniqueLinesRuleRoot: {fileID: 8531175340895861737}
+  regionTooBigRuleIcon: {fileID: 0}
+  regionTooSmallRuleIcon: {fileID: 0}
+  regionTooBigRuleOutline: {fileID: 2031895494146462726}
+  regionTooSmallRuleOutline: {fileID: 3645777813234368431}
+  regionTooBigRuleRoot: {fileID: 7071490973521784664}
+  regionTooSmallRuleRoot: {fileID: 6199006093973954689}
   ftueLevelIndicatorRoot: {fileID: 9191577523657076804}
   ftueLevelStepImages:
   - {fileID: 3802828643141274498}
@@ -7347,7 +7330,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: SkipFtueTutorial
         m_Mode: 1
         m_Arguments:
@@ -8703,11 +8686,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 634260589888418805, guid: c0b1eb7cd01f743c09791f65f2df1f38, type: 3}
   m_PrefabInstance: {fileID: 4203335370198322266}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4444636418673559259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 575258408795294337, guid: c0b1eb7cd01f743c09791f65f2df1f38, type: 3}
-  m_PrefabInstance: {fileID: 4203335370198322266}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6199006093973954689 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7805428705035889883, guid: c0b1eb7cd01f743c09791f65f2df1f38, type: 3}
@@ -8716,11 +8694,6 @@ RectTransform:
 --- !u!224 &7071490973521784664 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6374780046110106370, guid: c0b1eb7cd01f743c09791f65f2df1f38, type: 3}
-  m_PrefabInstance: {fileID: 4203335370198322266}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &8531175340895861737 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5490431078775322547, guid: c0b1eb7cd01f743c09791f65f2df1f38, type: 3}
   m_PrefabInstance: {fileID: 4203335370198322266}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &8816941205129994338 stripped

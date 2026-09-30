@@ -1,69 +1,10 @@
 {
-  "index": 8,
-  "name": "Level 8",
-  "set": "progression_1_6",
-  "difficulty": "Easy",
-  "size": 4,
-  "rules": {
-    "equalCounts": true,
-    "maxTwoAdjacent": true,
-    "uniqueLines": false
-  },
-  "clues": [
-    [
-      null,
-      null,
-      null,
-      1
-    ],
-    [
-      0,
-      null,
-      1,
-      0
-    ],
-    [
-      1,
-      0,
-      null,
-      null
-    ],
-    [
-      1,
-      null,
-      null,
-      1
-    ]
-  ],
-  "solution": [
-    [
-      0,
-      1,
-      0,
-      1
-    ],
-    [
-      0,
-      1,
-      1,
-      0
-    ],
-    [
-      1,
-      0,
-      1,
-      0
-    ],
-    [
-      1,
-      0,
-      0,
-      1
-    ]
-  ],
-  "coach": {
-    "icon": "↕️",
-    "title": "Rule 1 — it works downwards too",
-    "body": "Columns obey exactly the same rule as rows. If a row will not give you anything, read the column crossing it — the answer is often sitting there."
-  }
+    "id": "level_008",
+    "name": "Level 8",
+    "difficulty": "Easy",
+    "size": 5,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 85,
+    "clues": "22021/44000/01250/00000/05003",
+    "solution": "22421/44425/51255/55255/55333"
 }

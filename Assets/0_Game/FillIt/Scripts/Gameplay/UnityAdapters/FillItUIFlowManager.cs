@@ -3,9 +3,9 @@ using Shared.GameFlow.UnityAdapters;
 using Shared.Store.UnityAdapters;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
-    public sealed class CatFlapUIFlowManager : MonoBehaviour, IGameFlowView
+    public sealed class FillItUIFlowManager : MonoBehaviour, IGameFlowView
     {
         [SerializeField] private GameFlowViewAdapter gameFlowView;
         [SerializeField] private GameObject nextLevelButtonRoot;
@@ -16,11 +16,11 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// While true, Win/Fail state changes are swallowed here instead of reaching
-        /// GameFlowViewAdapter - CatFlapRuntimeController's own RenderStatus unconditionally calls
+        /// GameFlowViewAdapter - FillItRuntimeController's own RenderStatus unconditionally calls
         /// ShowState(Win/Fail) whenever session.GameState.Current is Won/Failed, independent of
-        /// CatFlapGameplayManager's event handlers, so it can't be stopped by guarding those
+        /// FillItGameplayManager's event handlers, so it can't be stopped by guarding those
         /// handlers alone. Daily Challenge has its own result popup (see
-        /// CatFlapDailyChallengeBridge) and sets this true/false around its sessions so the
+        /// FillItDailyChallengeBridge) and sets this true/false around its sessions so the
         /// regular LevelWinUIRoot/LevelFailUIRoot pages never show underneath/alongside it.
         /// </summary>
         public bool SuppressWinFailPages { get; set; }

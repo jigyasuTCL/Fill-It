@@ -30,6 +30,11 @@ namespace Shared.GameConfig
         // Seconds of no board input (and no hint use) while the Hint booster is available before
         // its idle-attention pulse starts - see CatFlapHintHighlightAnimator.
         public float HintHighlightIdleSeconds = 10f;
+        // Timer gameplay mode (GlobalConfig.GameplayMode): a level's countdown comes from its
+        // level data; only a level without one uses empty cells x TimerSecondsPerEmptyCell,
+        // never less than TimerMinimumSeconds.
+        public float TimerSecondsPerEmptyCell = 6f;
+        public float TimerMinimumSeconds = 45f;
 
         public GameRulesConfig CloneNormalized()
         {
@@ -53,7 +58,9 @@ namespace Shared.GameConfig
                 MistakeBlinkColor = MistakeBlinkColor,
                 MistakeBlinkDurationSeconds = Mathf.Max(0f, MistakeBlinkDurationSeconds),
                 MistakeBlinkCount = Math.Max(1, MistakeBlinkCount),
-                HintHighlightIdleSeconds = Mathf.Max(0f, HintHighlightIdleSeconds)
+                HintHighlightIdleSeconds = Mathf.Max(0f, HintHighlightIdleSeconds),
+                TimerSecondsPerEmptyCell = Mathf.Max(0f, TimerSecondsPerEmptyCell),
+                TimerMinimumSeconds = Mathf.Max(1f, TimerMinimumSeconds)
             };
         }
 

@@ -1,0 +1,10 @@
+{
+    "id": "dc_38_1",
+    "name": "Daily Challenge 38",
+    "difficulty": "Medium",
+    "size": 7,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 165,
+    "clues": "0000355/0500055/0400650/7400000/0705066/7070203/0043003",
+    "solution": "5553355/5545355/7445651/7455666/7775266/7473233/4443313"
+}

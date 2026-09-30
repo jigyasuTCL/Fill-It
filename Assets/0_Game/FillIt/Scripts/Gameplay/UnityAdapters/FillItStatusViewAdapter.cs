@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using CatFlap.Boosters;
-using CatFlap.Models;
-using CatFlap.Progress;
-using CatFlap.Validation;
-using CatFlap.Views;
+using FillIt.Models;
+using FillIt.Rules;
+using FillIt.Runtime;
+using FillIt.Views;
 using Shared.Boosters;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
-    public sealed class CatFlapStatusViewAdapter : MonoBehaviour, ICatFlapStatusView
+    public sealed class FillItStatusViewAdapter : MonoBehaviour, IFillItStatusView
     {
         [SerializeField] private TMP_Text levelLabel;
         private System.DateTime? dailyChallengeDate;
@@ -24,9 +23,9 @@ namespace CatFlap.UnityAdapters
         private string lastLevelId;
         private string lastLevelName;
         private bool isHardLevel;
-        // The player's own progression number (CatFlapGameplayManager.CurrentLevelNumber). Past
+        // The player's own progression number (FillItGameplayManager.CurrentLevelNumber). Past
         // GlobalConfig.TotalLevels that keeps counting up (101, 102, ...) while the level ASSET
-        // actually loaded is a reshuffled 1-100 loop level (see CatFlapLoopLevelSequencer) - and
+        // actually loaded is a reshuffled 1-100 loop level (see FillItLoopLevelSequencer) - and
         // SetLevel's id/name carry that looped asset's number, not the player's. Without this the
         // HUD tells a player on level 105 they're on "Level - 25". 0 = never set, fall back to
         // parsing id/name as before.
@@ -49,7 +48,7 @@ namespace CatFlap.UnityAdapters
         [SerializeField] private TMP_Text notesLabel;
         [SerializeField] private TMP_Text feedbackLabel;
         // The Settings button only - hidden during the board-tap FTUE tutorial (levels 1-3, see
-        // CatFlapGameplayManager.ApplyFtueState) while coins/level number stay visible, separate
+        // FillItGameplayManager.ApplyFtueState) while coins/level number stay visible, separate
         // from the per-feature attemptsHudRoot toggle below.
         [SerializeField] private GameObject settingsButtonRoot;
         [SerializeField] private Image[] attemptPips;
@@ -58,6 +57,14 @@ namespace CatFlap.UnityAdapters
         // The pips' shared parent container (has its own background pill Image) - hiding just the
         // pip Images still leaves this background visible, so this needs to be toggled too.
         [SerializeField] private GameObject attemptsHudRoot;
+
+        [Header("Timer HUD (Timer gameplay mode - shown in place of the hearts)")]
+        [SerializeField] private GameObject timerHudRoot;
+        [SerializeField] private TMP_Text timerCountdownLabel;
+        [SerializeField] private float timerLowSeconds = 10f;
+        [SerializeField] private Color timerNormalColor = new Color32(0x2B, 0x33, 0x5E, 0xFF);
+        [SerializeField] private Color timerLowColor = new Color32(0xE0, 0x3A, 0x3A, 0xFF);
+        private int lastTimerSecond = -1;
 
         [Header("Heart Break FX (plays on a pip's filled -> consumed transition)")]
         [SerializeField] private Sprite heartBreakLeftSprite;
@@ -77,15 +84,19 @@ namespace CatFlap.UnityAdapters
         // heartBreakVfxLifetimeSeconds rather than left to stop itself.
         [SerializeField] private ParticleSystem heartBreakVfxPrefab;
         [SerializeField] private float heartBreakVfxLifetimeSeconds = 1f;
-        [SerializeField] private TMP_Text equalCountsRuleIcon;
-        [SerializeField] private TMP_Text maxTwoAdjacentRuleIcon;
-        [SerializeField] private TMP_Text uniqueLinesRuleIcon;
-        [SerializeField] private GameObject equalCountsRuleOutline;
-        [SerializeField] private GameObject maxTwoAdjacentRuleOutline;
-        [SerializeField] private GameObject uniqueLinesRuleOutline;
-        [SerializeField] private RectTransform equalCountsRuleRoot;
-        [SerializeField] private RectTransform maxTwoAdjacentRuleRoot;
-        [SerializeField] private RectTransform uniqueLinesRuleRoot;
+        [Header("Rules panel - one chip per Fillomino rule (red/X while that rule is broken)")]
+        [FormerlySerializedAs("equalCountsRuleIcon")]
+        [SerializeField] private TMP_Text regionTooBigRuleIcon;
+        [FormerlySerializedAs("maxTwoAdjacentRuleIcon")]
+        [SerializeField] private TMP_Text regionTooSmallRuleIcon;
+        [FormerlySerializedAs("equalCountsRuleOutline")]
+        [SerializeField] private GameObject regionTooBigRuleOutline;
+        [FormerlySerializedAs("maxTwoAdjacentRuleOutline")]
+        [SerializeField] private GameObject regionTooSmallRuleOutline;
+        [FormerlySerializedAs("equalCountsRuleRoot")]
+        [SerializeField] private RectTransform regionTooBigRuleRoot;
+        [FormerlySerializedAs("maxTwoAdjacentRuleRoot")]
+        [SerializeField] private RectTransform regionTooSmallRuleRoot;
 
         [Header("FTUE Level Indicator (FtueLevelsIndicator - 4 step icons + 3 connecting linkers, one step per FTUE level)")]
         // Root of the whole widget (FtueLevelsIndicator) - active only for FTUE levels (see
@@ -114,7 +125,7 @@ namespace CatFlap.UnityAdapters
 
         [Header("Wrong Solution Text (pops in, then fades in/out on a loop while any line is flagged wrong)")]
         // No longer a TMP_Text - the Wrong Solution warning is now its own GameObject (background +
-        // icon art, see Assets/0_Game/CatFlap/Art/Sprites/wrong_solution_bg.png/wrong_solution_icon.png)
+        // icon art, see Assets/0_Game/FillIt/Art/Sprites/wrong_solution_bg.png/wrong_solution_icon.png)
         // that's enabled/disabled directly, with wrongSolutionCanvasGroup driving its fade (auto-
         // resolved via GetComponent if left unassigned) and its own Transform driving the scale pop.
         [SerializeField] private GameObject wrongSolutionRoot;
@@ -137,7 +148,7 @@ namespace CatFlap.UnityAdapters
         // Gap between each group's own START time (not between one finishing and the next
         // starting) - top HUD starts immediately, life panel starts one gap later, rules panel
         // two gaps later, all without waiting for an earlier group to finish. The booster panel
-        // (owned by CatFlapGameplayManager) continues this same sequence at three gaps in - see
+        // (owned by FillItGameplayManager) continues this same sequence at three gaps in - see
         // EntranceGroupStaggerSeconds.
         [SerializeField] private float entranceGroupStaggerSeconds = 0.12f;
 
@@ -145,12 +156,10 @@ namespace CatFlap.UnityAdapters
         private Coroutine[] pipBreakRoutines;
         private Coroutine reviveAnimationRoutine;
 
-        private bool equalCountsWasFailed;
-        private bool maxTwoAdjacentWasFailed;
-        private bool uniqueLinesWasFailed;
-        private Coroutine equalCountsBlinkRoutine;
-        private Coroutine maxTwoAdjacentBlinkRoutine;
-        private Coroutine uniqueLinesBlinkRoutine;
+        private bool regionTooBigWasFailed;
+        private bool regionTooSmallWasFailed;
+        private Coroutine regionTooBigBlinkRoutine;
+        private Coroutine regionTooSmallBlinkRoutine;
 
         private Coroutine wrongSolutionFadeRoutine;
 
@@ -177,7 +186,7 @@ namespace CatFlap.UnityAdapters
         // since SetCoinsHudVisible needs to hide the whole panel, not just clear its text.
         [SerializeField] private GameObject coinsHudRoot = null;
 
-        // FTUE-only visibility toggles (see CatFlapGameplayManager.ApplyFtueState) - Settings
+        // FTUE-only visibility toggles (see FillItGameplayManager.ApplyFtueState) - Settings
         // already has its own SetSettingsButtonVisible above this file; these three follow the
         // exact same "just SetActive the root" pattern for the remaining HUD elements FTUE hides.
         public void SetRulesPanelVisible(bool visible)
@@ -190,7 +199,7 @@ namespace CatFlap.UnityAdapters
 
         // RulesPanelRoot carries its own overriding Canvas (sortingOrder above the FTUE dim
         // overlay) so it still reads on top of the dim during Level 4's rules walkthrough - see
-        // CatFlapGameplayManager.ApplyFtueState's isRulesWalkthroughLevel. That override must be
+        // FillItGameplayManager.ApplyFtueState's isRulesWalkthroughLevel. That override must be
         // OFF everywhere else: RulesPanelRoot is the same shared prefab used in normal (non-FTUE)
         // gameplay, where it needs to sort exactly as before (plain sibling order) so it doesn't
         // bleed on top of other popups (level win/fail, settings, out-of-lives, ...) that sit
@@ -232,19 +241,18 @@ namespace CatFlap.UnityAdapters
             }
         }
 
-        // Level 4's FTUE rules walkthrough (see CatFlapFtueDriver.ConfigureRulesWalkthrough) hides
+        // Level 4's FTUE rules walkthrough (see FillItFtueDriver.ConfigureRulesWalkthrough) hides
         // each rule row individually and reveals them one at a time as the player earns them,
         // rather than showing/hiding the whole rulesPanelGroupRoot at once like every other FTUE
         // level does.
         // Screen-space RectTransform of one rule's own chip - the Level 4 FTUE popup animates onto
         // this exact spot (see FtueController.MoveBannerToTarget) right before that rule reveals.
-        public RectTransform GetRuleRowRect(CatFlapRule rule)
+        public RectTransform GetRuleRowRect(FillItRule rule)
         {
             return rule switch
             {
-                CatFlapRule.EqualCounts => equalCountsRuleRoot,
-                CatFlapRule.MaxTwoAdjacent => maxTwoAdjacentRuleRoot,
-                CatFlapRule.UniqueLines => uniqueLinesRuleRoot,
+                FillItRule.RegionTooBig => regionTooBigRuleRoot,
+                FillItRule.RegionTooSmall => regionTooSmallRuleRoot,
                 _ => null
             };
         }
@@ -256,7 +264,7 @@ namespace CatFlap.UnityAdapters
         // ftueLevelIndicatorPunchScale/ScalePunchRoutine elsewhere on this HUD.
         [SerializeField] private float ruleRevealPunchScale = 1.25f;
 
-        public void SetRuleRowVisible(CatFlapRule rule, bool visible)
+        public void SetRuleRowVisible(FillItRule rule, bool visible)
         {
             RectTransform ruleRect = GetRuleRowRect(rule);
             if (ruleRect == null)
@@ -270,7 +278,7 @@ namespace CatFlap.UnityAdapters
                 // Punch pop-in: grows from zero straight past full size to ruleRevealPunchScale,
                 // then settles back down to 1 - a much more visible "arrival" beat than a plain
                 // ease-in-to-1, and quick rather than a slow reveal. See
-                // CatFlapFtueDriver.RevealRuleThenAdvance, which reveals a rule row right as the
+                // FillItFtueDriver.RevealRuleThenAdvance, which reveals a rule row right as the
                 // FTUE banner arrives on it.
                 StartCoroutine(ScalePunchInRoutine(ruleRect, ruleRevealPunchDurationSeconds, ruleRevealPunchScale));
             }
@@ -381,7 +389,7 @@ namespace CatFlap.UnityAdapters
         /// <summary>
         /// Enables the Hard Level HUD indicator - called once
         /// HardLevelPopupController.OnMoveToTargetArrived fires (the popup's flying badge has
-        /// just "arrived" here), see CatFlapGameplayManager's wiring.
+        /// just "arrived" here), see FillItGameplayManager's wiring.
         /// </summary>
         public void EnableHardLevelUI()
         {
@@ -459,7 +467,7 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// Instantly hides the Hard Level HUD indicator - called at the start of every
-        /// LoadLevel/Clear/Restart (see CatFlapRuntimeController.VisualState.ClearErrorCells), so
+        /// LoadLevel/Clear/Restart (see FillItRuntimeController.VisualState.ClearErrorCells), so
         /// it never lingers on screen from a previous hard level once EnableHardLevelUI turns it on.
         /// </summary>
         public void DisableHardLevelUI()
@@ -493,7 +501,7 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// Disables the Info button - called the instant a win or loss is recorded
-        /// (CatFlapGameplayManager.HandleLevelWon/HandleLevelFailed), before any of their
+        /// (FillItGameplayManager.HandleLevelWon/HandleLevelFailed), before any of their
         /// celebration/fail animations or popups start, so it can't be tapped mid-resolution.
         /// </summary>
         public void DisableInfoButton()
@@ -506,7 +514,7 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// Re-enables the Info button - called at the start of every LoadLevel/Clear/Restart (see
-        /// CatFlapRuntimeController.VisualState.ClearErrorCells), same convention as
+        /// FillItRuntimeController.VisualState.ClearErrorCells), same convention as
         /// DisableHardLevelUI/ForceHideWrongSolutionWarning, so a fresh level never starts with it
         /// still disabled from the previous level's win/loss.
         /// </summary>
@@ -548,7 +556,7 @@ namespace CatFlap.UnityAdapters
         /// Scales every entry in EntryAnimationObject from 0 -> 1 (ease-out-back, same easing as
         /// the Wrong Solution pop-in below), staggered slightly so the HUD reads as one continuous
         /// pop-in instead of every element snapping into place on the same frame. Called by
-        /// CatFlapGameplayManager.PlayBoardEnterAnimation alongside the board's own enter
+        /// FillItGameplayManager.PlayBoardEnterAnimation alongside the board's own enter
         /// animation - every regular level load/restart and Daily Challenge load/restart funnels
         /// through that one method, so this replays every time the board does, not just once.
         /// Not wired to SetLevel/RefreshViews - those also fire for unrelated mid-session updates
@@ -637,7 +645,7 @@ namespace CatFlap.UnityAdapters
                 : FormatLevelNumber(lastLevelId, lastLevelName, isHardLevel, lastIsFtueLevel, displayLevelNumber));
         }
 
-        // Called by CatFlapGameplayManager with its own CurrentLevelNumber - see
+        // Called by FillItGameplayManager with its own CurrentLevelNumber - see
         // displayLevelNumber for why the label can't just read the loaded level's id/name.
         public void SetDisplayLevelNumber(int levelNumber)
         {
@@ -652,7 +660,7 @@ namespace CatFlap.UnityAdapters
 
         // The attempts/hearts HUD's own RectTransform - used to point the "Beware! Life gets
         // reduced on wrong moves" one-time FTUE tip at it (see
-        // CatFlapGameplayManager.ShowLevelAttemptTipIfNeeded).
+        // FillItGameplayManager.ShowLevelAttemptTipIfNeeded).
         public RectTransform AttemptsHudRectTransform => attemptsHudRoot != null ? attemptsHudRoot.transform as RectTransform : null;
 
         public void SetSettingsButtonVisible(bool visible)
@@ -660,7 +668,7 @@ namespace CatFlap.UnityAdapters
             settingsButtonRoot?.SetActive(visible);
         }
 
-        // Lets CatFlapGameplayManager continue this same start-time stagger for the booster
+        // Lets FillItGameplayManager continue this same start-time stagger for the booster
         // panel (the 4th group in the sequence, owned outside this class) - its start delay is
         // 3 * this gap, keeping "top HUD -> life -> rules -> booster" evenly spaced.
         public float EntranceGroupStaggerSeconds => entranceGroupStaggerSeconds;
@@ -668,7 +676,7 @@ namespace CatFlap.UnityAdapters
         /// <summary>
         /// Plays the in-game HUD's level-start entrance: after initialDelaySeconds (a shared
         /// head-start before any HUD element moves - the board's own entrance animation is not
-        /// held back by this, see CatFlapGameplayManager.PlayLevelStartEntranceSequence), the top
+        /// held back by this, see FillItGameplayManager.PlayLevelStartEntranceSequence), the top
         /// HUD group (coins/level number/settings) starts sliding down from above, the life
         /// pips' base starts sliding in one stagger gap later, and the rules panel starts scaling
         /// up in place two gaps later - each group starts without waiting for an earlier one to
@@ -872,18 +880,46 @@ namespace CatFlap.UnityAdapters
             onComplete?.Invoke();
         }
 
+        public void SetTimer(bool visible, float remainingSeconds)
+        {
+            if (timerHudRoot != null && timerHudRoot.activeSelf != visible)
+            {
+                timerHudRoot.SetActive(visible);
+                lastTimerSecond = -1;
+            }
+
+            if (!visible || timerCountdownLabel == null)
+            {
+                return;
+            }
+
+            // Rounded up, so "00:00" only shows once time has actually run out.
+            int seconds = Mathf.Max(0, Mathf.CeilToInt(remainingSeconds));
+            bool low = remainingSeconds <= timerLowSeconds;
+            if (seconds != lastTimerSecond)
+            {
+                lastTimerSecond = seconds;
+                timerCountdownLabel.text = FormatTime(seconds);
+                timerCountdownLabel.color = low ? timerLowColor : timerNormalColor;
+            }
+
+            // Last seconds pulse so running out never comes as a surprise.
+            float scale = low && seconds > 0 ? 1f + 0.08f * Mathf.Abs(Mathf.Sin(Time.unscaledTime * Mathf.PI * 2f)) : 1f;
+            timerCountdownLabel.transform.localScale = Vector3.one * scale;
+        }
+
         public void SetLevelMistakes(int remainingMistakes, int maxMistakes, bool animateHeartLoss = false, bool featureVisible = true)
         {
             SetText(livesLabel, $"{remainingMistakes}/{maxMistakes}");
             RenderAttempts(remainingMistakes, maxMistakes, animateHeartLoss, featureVisible);
         }
 
-        public void SetState(CatFlapGameState state)
+        public void SetState(FillItGameState state)
         {
             SetText(stateLabel, state.ToString());
         }
 
-        public void SetProgress(CatFlapProgressSnapshot progress)
+        public void SetProgress(FillItProgressSnapshot progress)
         {
             SetText(movesLabel, progress.Moves.ToString());
             SetText(timerLabel, FormatTime(progress.ElapsedSeconds));
@@ -900,44 +936,32 @@ namespace CatFlap.UnityAdapters
             SetText(notesLabel, enabled ? "Notes On" : "Notes Off");
         }
 
-        public void ShowMistake(int row, int column)
+        // analysis null = no level / wrong-answer rendering suppressed (FTUE): every chip neutral.
+        public void ShowRuleResult(FillItBoardAnalysis analysis, bool boardComplete)
         {
-            SetText(feedbackLabel, $"Mistake at {row},{column}");
-        }
-
-        public void ShowRuleResult(CatFlapRuleValidationResult result, bool boardComplete)
-        {
-            if (result == null || result.IsValid)
+            FillItRegion firstViolation = null;
+            if (analysis != null)
             {
-                SetText(feedbackLabel, string.Empty);
-            }
-            else
-            {
-                SetText(feedbackLabel, result.Violations[0].Message);
-            }
-
-            RenderRule(equalCountsRuleIcon, equalCountsRuleOutline, equalCountsRuleRoot, result, CatFlapRule.EqualCounts, boardComplete, ref equalCountsWasFailed, ref equalCountsBlinkRoutine);
-            RenderRule(maxTwoAdjacentRuleIcon, maxTwoAdjacentRuleOutline, maxTwoAdjacentRuleRoot, result, CatFlapRule.MaxTwoAdjacent, boardComplete, ref maxTwoAdjacentWasFailed, ref maxTwoAdjacentBlinkRoutine);
-            RenderRule(uniqueLinesRuleIcon, uniqueLinesRuleOutline, uniqueLinesRuleRoot, result, CatFlapRule.UniqueLines, boardComplete, ref uniqueLinesWasFailed, ref uniqueLinesBlinkRoutine);
-        }
-
-        public void ShowBoosterResult(CatFlapCellRevealResult result)
-        {
-            if (string.IsNullOrWhiteSpace(result.Message))
-            {
-                return;
+                for (int index = 0; index < analysis.Regions.Count && firstViolation == null; index++)
+                {
+                    if (analysis.Regions[index].IsViolation)
+                    {
+                        firstViolation = analysis.Regions[index];
+                    }
+                }
             }
 
-            SetText(feedbackLabel, result.Success ? $"{result.Message} ({result.Row},{result.Column})" : result.Message);
+            SetText(feedbackLabel, firstViolation == null
+                ? string.Empty
+                : firstViolation.Status == FillItRegionStatus.Over
+                    ? $"This {firstViolation.Value} region has {firstViolation.Size} cells - too many."
+                    : $"This {firstViolation.Value} region is boxed in with only {firstViolation.Size} cells.");
+
+            RenderRule(regionTooBigRuleIcon, regionTooBigRuleOutline, regionTooBigRuleRoot, analysis, FillItRule.RegionTooBig, boardComplete, ref regionTooBigWasFailed, ref regionTooBigBlinkRoutine);
+            RenderRule(regionTooSmallRuleIcon, regionTooSmallRuleOutline, regionTooSmallRuleRoot, analysis, FillItRule.RegionTooSmall, boardComplete, ref regionTooSmallWasFailed, ref regionTooSmallBlinkRoutine);
         }
 
-        /// <summary>
-        /// Hint-specific feedback with a star rating (1-3, from <see cref="CatFlap.Boosters.CatFlapBoardDifficultyScorer"/>
-        /// via CatFlapRuntimeSession.LastHintStars).
-        /// NOTE: hintStarsLabel is not yet wired to a prefab element - falls back to feedbackLabel
-        /// until a developer assigns a dedicated stars/hint-card Text field in the Inspector.
-        /// </summary>
-        public void ShowHintResult(CatFlapCellRevealResult result, int stars, int difficultyRemoved)
+        public void ShowHintResult(FillItHintResult result)
         {
             if (string.IsNullOrWhiteSpace(result.Message))
             {
@@ -950,12 +974,10 @@ namespace CatFlap.UnityAdapters
                 return;
             }
 
-            string message = CatFlapHintTextConfig.Load()?.TryBuildMessage(result.ReasonKey, result.Value, out string configuredMessage) == true
+            string message = FillItHintTextConfig.Load()?.TryBuildMessage(result.ReasonKey, result.Value, out string configuredMessage) == true
                 ? configuredMessage
                 : result.Message;
-
-            string starsText = new string('*', Mathf.Clamp(stars, 0, 3));
-            SetText(feedbackLabel, $"{message} {starsText}");
+            SetText(feedbackLabel, message);
         }
 
         public void ShowBoosterResult(BoosterUseResult result)
@@ -1303,13 +1325,13 @@ namespace CatFlap.UnityAdapters
             TMP_Text icon,
             GameObject outline,
             RectTransform ruleRoot,
-            CatFlapRuleValidationResult result,
-            CatFlapRule rule,
+            FillItBoardAnalysis analysis,
+            FillItRule rule,
             bool boardComplete,
             ref bool wasFailed,
             ref Coroutine blinkRoutine)
         {
-            bool valid = result == null || result.IsRuleValid(rule);
+            bool valid = analysis == null || !analysis.IsRuleBroken(rule);
             bool failed = !valid;
             Color backgroundColor = RuleNeutralColor;
             Color iconColor = RuleNeutralIconColor;
@@ -1357,19 +1379,14 @@ namespace CatFlap.UnityAdapters
         /// </summary>
         public void PlayRuleBreakBlink()
         {
-            if (equalCountsWasFailed)
+            if (regionTooBigWasFailed)
             {
-                TriggerRuleBlink(equalCountsRuleRoot, ref equalCountsBlinkRoutine);
+                TriggerRuleBlink(regionTooBigRuleRoot, ref regionTooBigBlinkRoutine);
             }
 
-            if (maxTwoAdjacentWasFailed)
+            if (regionTooSmallWasFailed)
             {
-                TriggerRuleBlink(maxTwoAdjacentRuleRoot, ref maxTwoAdjacentBlinkRoutine);
-            }
-
-            if (uniqueLinesWasFailed)
-            {
-                TriggerRuleBlink(uniqueLinesRuleRoot, ref uniqueLinesBlinkRoutine);
+                TriggerRuleBlink(regionTooSmallRuleRoot, ref regionTooSmallBlinkRoutine);
             }
         }
 

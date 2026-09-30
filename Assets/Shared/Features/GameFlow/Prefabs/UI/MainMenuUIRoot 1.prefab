@@ -550,7 +550,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 0
         m_Arguments:
@@ -897,6 +897,15 @@ MonoBehaviour:
   titleEntryDuration: 0.35
   titleEntryDistance: 300
   buttonScaleDuration: 0.25
+  buttonStaggerDelay: 0.08
+  playButtonTransform: {fileID: 0}
+  playButtonPulseStartDelay: 1.5
+  playButtonPulseDuration: 0.6
+  playButtonPulseMinScale: 0.95
+  playButtonPulseMaxScale: 1.05
+  normalLevelButtonRoot: {fileID: 0}
+  hardLevelButtonRoot: {fileID: 0}
+  CoinText: {fileID: 0}
 --- !u!1 &2648638677586916597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2029,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 0
         m_Arguments:
@@ -2877,7 +2886,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 0
         m_Arguments:
@@ -2907,8 +2916,19 @@ MonoBehaviour:
   timerRoot: {fileID: 8355382943585184943}
   timerLabel: {fileID: 5160843221809694476}
   dateLabel: {fileID: 4635139900441883847}
+  playButton: {fileID: 0}
+  completedRoot: {fileID: 0}
+  completedLabel: {fileID: 0}
+  completedText: Completed
   dateFormat: dd MMM
   refreshIntervalSeconds: 1
+  dailyChallengeManager: {fileID: 0}
+  unlockRevealObject: {fileID: 0}
+  unlockStartPosition: {x: 0, y: 0, z: 0}
+  unlockStartScale: {x: 0, y: 0, z: 0}
+  unlockEndPosition: {x: 0, y: 0, z: 0}
+  unlockEndScale: {x: 0, y: 0, z: 0}
+  unlockRevealDuration: 0.4
 --- !u!225 &1702386519059159346
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3409,7 +3429,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 0
         m_Arguments:

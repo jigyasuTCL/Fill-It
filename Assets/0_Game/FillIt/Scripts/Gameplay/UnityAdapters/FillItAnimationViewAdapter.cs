@@ -1,47 +1,29 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using CatFlap.Boosters;
-using CatFlap.Models;
-using CatFlap.Views;
-using Shared.Boosters;
+using FillIt.Models;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
-    public sealed class CatFlapAnimationViewAdapter : MonoBehaviour, ICatFlapAnimationView
+    /// <summary>Tunable beats between gameplay moments (e.g. a short pause before the win celebration).</summary>
+    public sealed class FillItAnimationViewAdapter : MonoBehaviour
     {
-        [SerializeField] private float cellChangedDelaySeconds;
-        [SerializeField] private float cellsLockedDelaySeconds;
-        [SerializeField] private float mistakeDelaySeconds;
-        [SerializeField] private float boosterDelaySeconds;
         [SerializeField] private float pageStateDelaySeconds;
 
         private Coroutine activeRoutine;
 
-        public void PlayCellChanged(CatFlapCellPosition position, CatFlapCellValue value, bool isNote, Action onComplete)
-        {
-            PlayDelay(cellChangedDelaySeconds, onComplete);
-        }
+        public float PageStateDelaySeconds => Mathf.Max(0f, pageStateDelaySeconds);
 
-        public void PlayCellsLocked(IReadOnlyList<CatFlapCellPosition> positions, Action onComplete)
+        public void PlayPageState(FillItGameState state, Action onComplete)
         {
-            PlayDelay(cellsLockedDelaySeconds, onComplete);
-        }
+            if (!isActiveAndEnabled || pageStateDelaySeconds <= 0f)
+            {
+                onComplete?.Invoke();
+                return;
+            }
 
-        public void PlayMistake(CatFlapCellPosition position, Action onComplete)
-        {
-            PlayDelay(mistakeDelaySeconds, onComplete);
-        }
-
-        public void PlayBooster(BoosterType boosterType, CatFlapCellRevealResult result, Action onComplete)
-        {
-            PlayDelay(boosterDelaySeconds, onComplete);
-        }
-
-        public void PlayPageState(CatFlapGameState state, Action onComplete)
-        {
-            PlayDelay(pageStateDelaySeconds, onComplete);
+            CancelAll();
+            activeRoutine = StartCoroutine(CompleteAfterDelay(pageStateDelaySeconds, onComplete));
         }
 
         public void CancelAll()
@@ -58,25 +40,9 @@ namespace CatFlap.UnityAdapters
             CancelAll();
         }
 
-        private void PlayDelay(float delaySeconds, Action onComplete)
-        {
-            if (!isActiveAndEnabled)
-            {
-                onComplete?.Invoke();
-                return;
-            }
-
-            CancelAll();
-            activeRoutine = StartCoroutine(CompleteAfterDelay(delaySeconds, onComplete));
-        }
-
         private IEnumerator CompleteAfterDelay(float delaySeconds, Action onComplete)
         {
-            if (delaySeconds > 0f)
-            {
-                yield return new WaitForSeconds(delaySeconds);
-            }
-
+            yield return new WaitForSeconds(delaySeconds);
             activeRoutine = null;
             onComplete?.Invoke();
         }

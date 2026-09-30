@@ -3,14 +3,14 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
     /// The "level start" cover shown for a few seconds right after a Daily Challenge sub-level
     /// loads, then fades out to reveal the already-loaded gameplay behind it - a fake-loading
     /// beat, not a real load (the level is local JSON and loads instantly).
     /// </summary>
-    public sealed class CatFlapDailyChallengeLoadingOverlay : MonoBehaviour
+    public sealed class FillItDailyChallengeLoadingOverlay : MonoBehaviour
     {
         [SerializeField] private GameObject overlayRoot;
         [SerializeField] private CanvasGroup canvasGroup;

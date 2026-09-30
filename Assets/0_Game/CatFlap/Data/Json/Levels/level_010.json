@@ -1,70 +1,10 @@
 {
-  "index": 10,
-  "name": "Level 10",
-  "set": "progression_1_6",
-  "difficulty": "Easy",
-  "size": 4,
-  "rules": {
-    "equalCounts": true,
-    "maxTwoAdjacent": true,
-    "uniqueLines": false
-  },
-  "clues": [
-    [
-      1,
-      null,
-      null,
-      0
-    ],
-    [
-      null,
-      1,
-      null,
-      0
-    ],
-    [
-      null,
-      0,
-      1,
-      null
-    ],
-    [
-      1,
-      null,
-      null,
-      null
-    ]
-  ],
-  "solution": [
-    [
-      1,
-      1,
-      0,
-      0
-    ],
-    [
-      0,
-      1,
-      1,
-      0
-    ],
-    [
-      0,
-      0,
-      1,
-      1
-    ],
-    [
-      1,
-      0,
-      0,
-      1
-    ]
-  ],
-  "checkpoint": true,
-  "coach": {
-    "icon": "🚩",
-    "title": "Checkpoint — both rules",
-    "body": "Nothing new. Equal counts, and never three alike in a row. Take your time."
-  }
+    "id": "level_010",
+    "name": "Level 10",
+    "difficulty": "Easy",
+    "size": 5,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 100,
+    "clues": "03021/00000/25002/00300/52000",
+    "solution": "33221/23444/25542/55332/52231"
 }

@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 100b61d257f6b4bf0b4ad08e099849bf, type: 3}
-  m_Name: CatFlapHintTextConfig
-  m_EditorClassIdentifier: 
-  forcedAdjacentPairTemplate: "Two {2} are already touching.\nSo this one is a {0}!"
-  forcedSandwichTemplate: "A {1} here makes 3.\nSo this one is a {0}!"
-  forcedLineMaximumTemplate: "This line already has all its {2}.\nSo this one is a
-    {0}!"
-  wrongTileTemplate: "This can't be a {1}.\nIt has to be a {0}!"
-  closestToCompletionTemplate: "Only one choice works here.\nIt's a {0}!"
+  m_Name: FillItHintTextConfig
+  m_EditorClassIdentifier:
+  fixWrongNumberTemplate: "This number doesn't fit.\nIt has to be a {0}!"
+  completeRegionTemplate: "One cell left for this {0}.\nIt goes here!"
+  growRegionTemplate: "This {0} needs more room.\nIt grows into here!"
+  singleCellTemplate: "This cell stands on its own.\nIt's a {0}!"
+  startRegionTemplate: "A new region starts here.\nIt's a {0}!"

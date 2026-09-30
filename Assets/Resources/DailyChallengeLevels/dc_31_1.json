@@ -1,0 +1,10 @@
+{
+    "id": "dc_31_1",
+    "name": "Daily Challenge 31",
+    "difficulty": "Medium",
+    "size": 6,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 120,
+    "clues": "016000/000324/061000/550010/401020/004150",
+    "solution": "616444/666324/561325/555315/451225/444155"
+}

@@ -1,17 +1,17 @@
-using CatFlap.Runtime;
+using FillIt.Runtime;
 using DailyChallenges;
 using MangraGames;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
-    /// The only place Cat Flap gameplay and the Shared Daily Challenge feature talk to each
+    /// The only place Fill It gameplay and the Shared Daily Challenge feature talk to each
     /// other. It does not own any calendar/date/queue/unlock/progression logic itself - that all
     /// stays inside DailyChallengeController. This bridge:
     /// 1) reacts to DailyChallengeController.DailyChallengeGameplayRequested by loading the
-    ///    resolved level through the normal Cat Flap runtime, behind a level-start cover overlay,
-    /// 2) reports the already-generic CatFlapRuntimeController.LevelWon/LevelFailed/OutOfMistakes
+    ///    resolved level through the normal Fill It runtime, behind a level-start cover overlay,
+    /// 2) reports the already-generic FillItRuntimeController.LevelWon/LevelFailed/OutOfMistakes
     ///    events (and a Home/quit while a session is active) back to
     ///    DailyChallengeController.ReportGameplayResult/ReportGameplayInterrupted - gameplay
     ///    itself never branches on "is this a Daily Challenge" internally, and
@@ -19,13 +19,13 @@ namespace CatFlap.UnityAdapters
     ///    wiring its Back/Continue/Retry actions back into DailyChallengeController/menu
     ///    navigation - the popup itself only presents whatever labels/actions it's given.
     /// </summary>
-    public sealed class CatFlapDailyChallengeBridge : MonoBehaviour
+    public sealed class FillItDailyChallengeBridge : MonoBehaviour
     {
-        [SerializeField] private CatFlapGameplayManager gameplayManager;
+        [SerializeField] private FillItGameplayManager gameplayManager;
         [SerializeField] private DailyChallengeManager dailyChallengeManager;
         [SerializeField] private MainMenuHandler mainMenuHandler;
-        [SerializeField] private CatFlapDailyChallengeWinPopupController winResultPopup;
-        [SerializeField] private CatFlapDailyChallengeFailPopupController failResultPopup;
+        [SerializeField] private FillItDailyChallengeWinPopupController winResultPopup;
+        [SerializeField] private FillItDailyChallengeFailPopupController failResultPopup;
 
         [SerializeField] private string winTitle = "Level Complete!";
         [SerializeField] private string failTitle = "Level Failed";
@@ -61,7 +61,7 @@ namespace CatFlap.UnityAdapters
 
             // The only place a calendar cell (DailyChallengeDateButton, Shared) reaches CatFlap's
             // saved-board progress data - a static delegate rather than a direct reference, so
-            // that Shared feature never needs to know CatFlapGameplayManager exists.
+            // that Shared feature never needs to know FillItGameplayManager exists.
             DailyChallengeDateButton.ProgressPercentProvider = TryGetProgressPercent;
         }
 
@@ -104,7 +104,7 @@ namespace CatFlap.UnityAdapters
         {
             if (gameplayManager == null || data == null || levelIndex < 0)
             {
-                Debug.LogWarning("CatFlapDailyChallengeBridge: ignoring request - gameplayManager not assigned, or invalid data/levelIndex.");
+                Debug.LogWarning("FillItDailyChallengeBridge: ignoring request - gameplayManager not assigned, or invalid data/levelIndex.");
                 return;
             }
 
@@ -132,7 +132,7 @@ namespace CatFlap.UnityAdapters
 
         private void BindRuntimeEvents()
         {
-            CatFlapRuntimeController runtimeController = gameplayManager != null ? gameplayManager.Controller : null;
+            FillItRuntimeController runtimeController = gameplayManager != null ? gameplayManager.Controller : null;
             if (runtimeController == null)
             {
                 return;
@@ -142,7 +142,7 @@ namespace CatFlap.UnityAdapters
             // it is NOT a final result. Reacting to it here would show the Daily Challenge fail
             // popup at the same moment as Out-of-Lives. The real result only arrives via
             // LevelFailed, which fires once the player actually taps Give Up
-            // (CatFlapGameplayManager.HandleOutOfLivesGiveUp -> controller.ForceFail()) - the
+            // (FillItGameplayManager.HandleOutOfLivesGiveUp -> controller.ForceFail()) - the
             // intended flow is Out-of-Lives -> (Watch Ad/Refill continues, or Give Up) -> Challenge
             // Fail, never both popups at once.
             runtimeController.LevelWon += HandleLevelWon;
@@ -151,7 +151,7 @@ namespace CatFlap.UnityAdapters
 
         private void UnbindRuntimeEvents()
         {
-            CatFlapRuntimeController runtimeController = gameplayManager != null ? gameplayManager.Controller : null;
+            FillItRuntimeController runtimeController = gameplayManager != null ? gameplayManager.Controller : null;
             if (runtimeController == null)
             {
                 return;
@@ -169,7 +169,7 @@ namespace CatFlap.UnityAdapters
         private void HandleLevelWon(object sender, System.EventArgs eventArgs)
         {
             // Waits for the same celebration beat a normal level's win popup waits for (see
-            // CatFlapGameplayManager.PlayLevelWinCelebrationThenShowPopup/LevelWinCelebrationFinished)
+            // FillItGameplayManager.PlayLevelWinCelebrationThenShowPopup/LevelWinCelebrationFinished)
             // before reporting the Win - previously this reported (and so showed the DC win popup)
             // immediately on LevelWon, popping it up while the board was still mid-celebration.
             if (gameplayManager != null)
@@ -271,7 +271,7 @@ namespace CatFlap.UnityAdapters
                     showBack: !dayComplete,
                     // DC's own level-complete interstitial gate - shares the same normal-level-
                     // progression unlock/cooldown as LoadNextLevel (see
-                    // CatFlapGameplayManager.TryShowLevelCompleteInterstitial), just with the DC
+                    // FillItGameplayManager.TryShowLevelCompleteInterstitial), just with the DC
                     // ad placement. Falls back to proceeding with no ad if gameplayManager is
                     // somehow unassigned, so Continue never silently stops working.
                     primaryAction: () =>
@@ -303,7 +303,7 @@ namespace CatFlap.UnityAdapters
                     primaryAction: () => controller.ContinueChallenge(data),
                     backAction: BackToDailyChallengePopup);
 
-                // This popup doubles as CatFlapGameplayManager's "out of lives" (still-recoverable,
+                // This popup doubles as FillItGameplayManager's "out of lives" (still-recoverable,
                 // mid-level) popup, which DOES offer a revive option - but here it's presenting the
                 // FINAL lost result (after Give Up), where reviving is no longer a real option, so
                 // force those hidden regardless of whatever affordability/eligibility state is
@@ -320,7 +320,7 @@ namespace CatFlap.UnityAdapters
                 : string.Empty;
         }
 
-        // Mirrors CatFlapGameplayManager.HandleLevelWinWatchAd's AdsManager.ShowRewarded(...)
+        // Mirrors FillItGameplayManager.HandleLevelWinWatchAd's AdsManager.ShowRewarded(...)
         // pattern - once actually rewarded, doubles the Daily Challenge win popup's coin reward
         // and continues, same as tapping Primary.
         private void HandleWinWatchAd()
@@ -331,7 +331,7 @@ namespace CatFlap.UnityAdapters
                 {
                     // Grants the wallet the second half of the reward before the popup's own
                     // DoubleWinCoinsAndContinue doubles what it merely DISPLAYS - see
-                    // CatFlapGameplayManager.GrantDailyChallengeWatchAdBonus.
+                    // FillItGameplayManager.GrantDailyChallengeWatchAdBonus.
                     gameplayManager?.GrantDailyChallengeWatchAdBonus();
                     winResultPopup?.DoubleWinCoinsAndContinue();
                 }
@@ -346,7 +346,7 @@ namespace CatFlap.UnityAdapters
         {
             gameplayManager?.SaveAndShowMainMenu();
 
-            // SaveAndShowMainMenu() fires CatFlapGameplayManager.ReturnedToMainMenu, which
+            // SaveAndShowMainMenu() fires FillItGameplayManager.ReturnedToMainMenu, which
             // MainMenuHandler answers by forcing its Home tab toggle on (ActivateHomeTab) - going
             // through mainMenuHandler here (instead of dailyChallengeManager.ShowPopup()
             // directly) re-selects the bottom-nav Daily Challenges icon afterward, so it doesn't
@@ -367,7 +367,7 @@ namespace CatFlap.UnityAdapters
             // Give Up from the Out of Lives popup during a Daily Challenge attempt should land
             // back on the Daily Challenge popup, not a bare Home screen - same destination as
             // BackToDailyChallengePopup. This fires from inside
-            // CatFlapGameplayManager.AbandonLevelToMainMenu BEFORE it calls ReturnToMainMenu(), so
+            // FillItGameplayManager.AbandonLevelToMainMenu BEFORE it calls ReturnToMainMenu(), so
             // the menu isn't showing yet here; defer to HandleReturnedToMainMenu instead of calling
             // OpenDailyChallengePopup directly.
             reopenDailyChallengePopupOnMainMenuReturn = true;
@@ -375,14 +375,14 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// Fires on every return to the Main Menu, including a plain Home pause
-        /// (CatFlapGameplayManager.SettingsHome) that must stay resumable. Two independent things
+        /// (FillItGameplayManager.SettingsHome) that must stay resumable. Two independent things
         /// happen here, each gated by its own flag so neither masks the other:
         /// 1) If reopenDailyChallengePopupOnMainMenuReturn was set (Give Up during a Daily
         ///    Challenge attempt - see HandleAttemptAbandoned), reopen the Daily Challenge popup
         ///    now that the menu has actually finished showing.
         /// 2) If isDailyChallengeSessionActive is still true (e.g. a plain Home pause
         ///    mid-attempt), stop listening to this attempt's
-        ///    CatFlapRuntimeController.LevelWon/LevelFailed - without this, going Home
+        ///    FillItRuntimeController.LevelWon/LevelFailed - without this, going Home
         ///    mid-attempt then playing (and winning/losing) a normal level would still hit this
         ///    bridge's stale HandleLevelWon/HandleLevelFailed, reporting that unrelated result to
         ///    DailyChallengeController and popping its result popup alongside the normal one.
@@ -414,7 +414,7 @@ namespace CatFlap.UnityAdapters
         }
 
         /// <summary>
-        /// CatFlapGameplayManager.RestartLevel() reloads the same Daily Challenge sub-level in
+        /// FillItGameplayManager.RestartLevel() reloads the same Daily Challenge sub-level in
         /// place after Settings Quit already reported the discarded attempt as interrupted (see
         /// HandleAttemptAbandoned above), which left this bridge unbound/inactive. Re-bind so the
         /// new attempt's eventual LevelWon/LevelFailed reaches DailyChallengeController again.

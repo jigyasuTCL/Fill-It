@@ -2525,6 +2525,7 @@ MonoBehaviour:
   feedbackButton: {fileID: 6242108785062691764}
   privacyPolicyButton: {fileID: 2753528947558040371}
   termsButton: {fileID: 8816800277199772605}
+  restorePurchasesButton: {fileID: 0}
   soundToggle: {fileID: 1107072228839016768}
   musicToggle: {fileID: 5943069656826333192}
   hapticToggle: {fileID: 7491028495792331210}
@@ -2547,7 +2548,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: PauseForSettingsPopup
         m_Mode: 0
         m_Arguments:
@@ -2562,7 +2563,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: ResumeFromSettingsPopup
         m_Mode: 0
         m_Arguments:
@@ -2577,7 +2578,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: SettingsHome
         m_Mode: 0
         m_Arguments:
@@ -2592,7 +2593,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: SettingsQuit
         m_Mode: 0
         m_Arguments:

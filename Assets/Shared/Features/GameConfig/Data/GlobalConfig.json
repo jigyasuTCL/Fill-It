@@ -7,6 +7,7 @@
   "levelExtraMovesCount": 3,
   "levelExtraMovesOnRevive": 3,
   "levelExtraTime": 30,
+  "gameplayMode": "Timer",
   "totalLevels": 100,
   "hardLevels": [],
   "loopLevels": {
@@ -36,6 +37,6 @@
   ],
   "resumeSavedLevelOnPlay": true,
   "restoreCurrentBoardOnLoad": true,
-  "currentLevelIndexSaveKey": "CatFlap.CurrentLevelIndex",
-  "boardStateSaveKeyPrefix": "CatFlap.Board."
+  "currentLevelIndexSaveKey": "FillIt.CurrentLevelIndex",
+  "boardStateSaveKeyPrefix": "FillIt.Board."
 }

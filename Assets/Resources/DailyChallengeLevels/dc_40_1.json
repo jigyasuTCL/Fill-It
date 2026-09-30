@@ -1,0 +1,10 @@
+{
+    "id": "dc_40_1",
+    "name": "Daily Challenge 40",
+    "difficulty": "Medium",
+    "size": 6,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 120,
+    "clues": "003300/500010/205030/305300/306106/600002",
+    "solution": "223336/555216/225236/335336/366166/666622"
+}

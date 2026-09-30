@@ -11,9 +11,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e3d88459800441794309d37d335e89e, type: 3}
   m_Name: FtueSteps_Level4
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Steps:
-  - Description: Maximum 2 adjacent <sprite="CatFlapFtueCatSpriteAsset" name="Cat">
-      or <sprite="CatFlapFtueFishSpriteAsset" name="Fish"> in each row and column
-  - Description: Each row and column should have equal <sprite="CatFlapFtueCatSpriteAsset"
-      name="Cat">and <sprite="CatFlapFtueFishSpriteAsset" name="Fish">
+  - Description: "The 2 needs one more cell. <b>Drag</b> it to the right."
+  - Description: "The 4 can only grow down. <b>Drag</b> it down the column."
+  - Description: "The 3s need a third cell. <b>Drag</b> down into it."
+  - Description: "Link the 4s: <b>drag</b> down into the empty cell."
+  - Description: "The middle 2 needs a partner. <b>Drag</b> it down."
+  - Description: "Every neighbour is finished. <b>Tap</b> the last cell for a 1."

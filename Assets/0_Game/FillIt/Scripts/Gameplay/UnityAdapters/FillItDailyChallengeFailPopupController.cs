@@ -6,11 +6,11 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
     /// Daily Challenge "Out of Lives" popup - shown when out of mistakes during a Daily Challenge
-    /// sub-level. The bridge (CatFlapDailyChallengeBridge) decides labels/actions/whether Back
+    /// sub-level. The bridge (FillItDailyChallengeBridge) decides labels/actions/whether Back
     /// shows; this component only presents them.
     ///
     /// Structural/animation clone of Shared.GameFlow.OutOfLivesPopupController - background fade,
@@ -20,7 +20,7 @@ namespace CatFlap.UnityAdapters
     /// by DailyChallengeController's ad-gate (ShouldRequireAdForSelectedDate), not by this
     /// component or the bridge.
     /// </summary>
-    public sealed class CatFlapDailyChallengeFailPopupController : MonoBehaviour
+    public sealed class FillItDailyChallengeFailPopupController : MonoBehaviour
     {
         [Header("Core")]
         [SerializeField] private GameObject root;
@@ -302,7 +302,7 @@ namespace CatFlap.UnityAdapters
         }
 
         // title is unused here - the Fail popup's title is predefined art baked into titleImage's
-        // prefab content, not set at runtime (mirrors CatFlapDailyChallengeWinPopupController).
+        // prefab content, not set at runtime (mirrors FillItDailyChallengeWinPopupController).
         // primaryButton's label is likewise predefined art/text ("Restart") baked into the prefab.
         public void Show(string title, string progressText, bool showBack, Action primaryAction, Action backAction)
         {

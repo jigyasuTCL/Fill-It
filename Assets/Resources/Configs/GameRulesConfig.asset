@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config:
     LevelMistakeLimit: 3
-    WrongValidationDelaySeconds: 0.75
+    WrongValidationDelaySeconds: 1.5
     CorrectValidationDelaySeconds: 0.55
     LastCellCorrectValidationDelaySeconds: 0.4
     AutosaveIntervalSeconds: 5

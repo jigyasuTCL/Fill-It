@@ -224,6 +224,36 @@ namespace Shared.GameFlow
             RefreshTexts();
         }
 
+        private string defaultTitleText;
+        private string defaultRefillTextFormat;
+
+        /// <summary>
+        /// Lets a game reuse this popup for another "can't continue" reason (e.g. a timer running
+        /// out): replaces the title text and the refill button's format ({0} = coin cost). Pass
+        /// null for either to put back what the prefab was authored with.
+        /// </summary>
+        public void SetTexts(string title, string refillFormat)
+        {
+            TMP_Text titleLabel = titleImage != null ? titleImage.GetComponentInChildren<TMP_Text>(true) : null;
+            if (titleLabel != null)
+            {
+                if (defaultTitleText == null)
+                {
+                    defaultTitleText = titleLabel.text;
+                }
+
+                titleLabel.text = string.IsNullOrEmpty(title) ? defaultTitleText : title;
+            }
+
+            if (defaultRefillTextFormat == null)
+            {
+                defaultRefillTextFormat = refillTextFormat;
+            }
+
+            refillTextFormat = string.IsNullOrEmpty(refillFormat) ? defaultRefillTextFormat : refillFormat;
+            RefreshTexts();
+        }
+
         /// <summary>
         /// Levels 1..N get that level's own CatFlapLevelResultTextConfig fail line, in order; any
         /// level past the last configured entry gets a random one from the same list. Called by

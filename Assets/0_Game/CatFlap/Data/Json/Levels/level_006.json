@@ -1,69 +1,10 @@
 {
-  "index": 6,
-  "name": "Level 6",
-  "set": "progression_1_6",
-  "difficulty": "Easy",
-  "size": 4,
-  "rules": {
-    "equalCounts": true,
-    "maxTwoAdjacent": true,
-    "uniqueLines": false
-  },
-  "clues": [
-    [
-      null,
-      0,
-      1,
-      null
-    ],
-    [
-      0,
-      0,
-      1,
-      null
-    ],
-    [
-      null,
-      1,
-      0,
-      0
-    ],
-    [
-      1,
-      null,
-      0,
-      null
-    ]
-  ],
-  "solution": [
-    [
-      0,
-      0,
-      1,
-      1
-    ],
-    [
-      0,
-      0,
-      1,
-      1
-    ],
-    [
-      1,
-      1,
-      0,
-      0
-    ],
-    [
-      1,
-      1,
-      0,
-      0
-    ]
-  ],
-  "coach": {
-    "icon": "⚖️",
-    "title": "Rule 1 — Equal Cats & Fish",
-    "body": "Here is the first of only two rules. <b>Every row and every column holds exactly 2 Cats and 2 Fish.</b> So the moment a line has both its Fish, every empty square left in it must be a Cat. Every single move on this board works that way."
-  }
+    "id": "level_006",
+    "name": "Level 6",
+    "difficulty": "Easy",
+    "size": 4,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 60,
+    "clues": "0020/0102/4330/0000",
+    "solution": "4221/4132/4332/4221"
 }

@@ -36,7 +36,7 @@ namespace Shared.CheatUI
         [SerializeField] private TMP_InputField correctValidationDelayInput;
         [SerializeField] private TMP_Text loopLevelReadoutText;
         [SerializeField] private string playerDataFileName = PlayerDataDefaults.FileName;
-        [SerializeField] private string currentLevelIndexKey = "CatFlap.CurrentLevelIndex";
+        [SerializeField] private string currentLevelIndexKey = "FillIt.CurrentLevelIndex";
         [SerializeField] private string boosterCountKeyPrefix = PlayerDataDefaults.BoosterCountKeyPrefix;
 
         private bool gameplayInputWasEnabled;
@@ -240,6 +240,18 @@ namespace Shared.CheatUI
             SavePlayerData(data);
             PlayerDataChanged.Invoke();
             ClosePanel();
+        }
+
+        /// <summary>
+        /// The game pushes the save key it actually reads the level index from (GlobalConfig
+        /// CurrentLevelIndexSaveKey), so Jump Level can't drift from it via a stale serialized value.
+        /// </summary>
+        public void SetCurrentLevelIndexKey(string key)
+        {
+            if (!string.IsNullOrWhiteSpace(key))
+            {
+                currentLevelIndexKey = key;
+            }
         }
 
         public void SetValidationDelayValues(float wrongDelaySeconds, float correctDelaySeconds)

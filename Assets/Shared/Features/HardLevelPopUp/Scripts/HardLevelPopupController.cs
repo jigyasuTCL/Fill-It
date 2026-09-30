@@ -47,7 +47,7 @@ namespace Shared.GameFlow
         [SerializeField] private bool scaleWhileMovingToTarget = false;
         [SerializeField] private Vector3 moveToTargetScale = Vector3.one;
 
-        [Tooltip("Fired the instant moveToTargetImage actually reaches moveToTargetDestination - e.g. wire this to CatFlapStatusViewAdapter to enable its hardLevelUI HUD element right as the badge \"arrives\".")]
+        [Tooltip("Fired the instant moveToTargetImage actually reaches moveToTargetDestination - e.g. wire this to FillItStatusViewAdapter to enable its hardLevelUI HUD element right as the badge \"arrives\".")]
         public UnityEvent OnMoveToTargetArrived = new UnityEvent();
 
         [Tooltip("Every image here also fades its own alpha to 0, alongside panelCanvasGroup and moveToTargetImage, the moment PlayCloseAnimation runs.")]

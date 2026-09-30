@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using Shared.Store.UnityAdapters;
 using Shared.GameFlow;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     public sealed class MainMenuHandler : MonoBehaviour
     {
-        [SerializeField] private CatFlapGameplayManager gameplayManager;
+        [SerializeField] private FillItGameplayManager gameplayManager;
 
         [Header("Bottom Buttons")]
         [SerializeField] private HSScreenButtonView homeScreenButton;
@@ -66,7 +66,7 @@ namespace CatFlap.UnityAdapters
             BindButtons();
             ActivateHomeTab(false);
 
-            // CatFlapGameplayManager.Start() (which runs after every OnEnable, including this
+            // FillItGameplayManager.Start() (which runs after every OnEnable, including this
             // one) skips Home entirely and calls StartGame() directly for a first-time player -
             // normally only RequestPlay()'s click handler hides mainMenuUIRoot, so without this
             // ActivateHomeTab's own SetActive(mainMenuUIRoot, true) above would be left showing
@@ -187,7 +187,7 @@ namespace CatFlap.UnityAdapters
         /// <summary>
         /// DailyChallengeManager.PopupShown fires whenever its popup actually opens, no matter
         /// who triggered it - covers callers that don't (and, being Shared code, can't) know
-        /// about this Cat Flap-specific bottom-nav toggle, e.g. UnlockManager auto-opening the
+        /// about this Fill It-specific bottom-nav toggle, e.g. UnlockManager auto-opening the
         /// popup right after the player crosses the Daily Challenge unlock level. Skips the
         /// toggle re-select when it's already correctly selected (the direct-tap path already
         /// selected it itself via HandleDailyChallengeToggle's own OnToggle call, with its click
@@ -243,7 +243,7 @@ namespace CatFlap.UnityAdapters
         /// check + modal popup), but also snaps that icon's own toggle to "selected" first -
         /// only when actually unlocked, so a caller can never mark a locked icon "selected".
         /// Needed when something else already forced Home/Shop to look selected right before
-        /// this runs - e.g. CatFlapDailyChallengeBridge's BackToDailyChallengePopup calls
+        /// this runs - e.g. FillItDailyChallengeBridge's BackToDailyChallengePopup calls
         /// gameplayManager.SaveAndShowMainMenu() (which fires ReturnedToMainMenu -&gt;
         /// ActivateHomeTab, forcing Home's toggle on) immediately before reopening this popup, so
         /// without this the bottom nav was showing Home as active while the Daily Challenge popup
@@ -294,7 +294,7 @@ namespace CatFlap.UnityAdapters
         }
 
         /// <summary>
-        /// Called by CatFlapDailyChallengeBridge right after a Daily Challenge level has actually
+        /// Called by FillItDailyChallengeBridge right after a Daily Challenge level has actually
         /// loaded, whichever CTA started the flow (this widget's own PLAY, or the popup's
         /// Play/Watch Ad/Continue button) - the popup's path never went through
         /// PlayDailyChallengeDirectly above, so nothing else hides the Main Menu/closes the popup
@@ -488,7 +488,7 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// Pushes the player's current coin total to the home tab's coin text. Called whenever the
-        /// coin total actually changes (level win/spend saved via CatFlapGameplayManager.SaveProgress,
+        /// coin total actually changes (level win/spend saved via FillItGameplayManager.SaveProgress,
         /// cheat "Add Coins") as well as whenever the home tab is shown, so the display never goes
         /// stale while the main menu is up.
         /// </summary>

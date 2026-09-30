@@ -1,0 +1,10 @@
+{
+    "id": "dc_34_1",
+    "name": "Daily Challenge 34",
+    "difficulty": "Medium",
+    "size": 6,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 120,
+    "clues": "303041/405000/405050/206302/300600/060000",
+    "solution": "333441/445544/445552/226332/336631/366622"
+}

@@ -1,9 +1,9 @@
 using Shared.CheatUI;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
-    public partial class CatFlapGameplayManager
+    public partial class FillItGameplayManager
     {
         public void CheatApplyPlayerData()
         {
@@ -18,7 +18,7 @@ namespace CatFlap.UnityAdapters
             int targetLevelIndex = progressSaveManager?.LoadCurrentLevelIndex(currentLevelIndex, GetLevelCount()) ?? currentLevelIndex;
             if (targetLevelIndex != currentLevelIndex)
             {
-                StopDelayedValidation();
+                StopPendingMistake();
                 boardSaveManager?.Clear(controller?.Session);
                 boosterManager?.ClearUndoHistory();
                 currentLevelIndex = targetLevelIndex;
@@ -31,24 +31,29 @@ namespace CatFlap.UnityAdapters
 
         public void CheatWinLevel()
         {
-            StopDelayedValidation();
+            StopPendingMistake();
             Shared.GameFlow.InputManager.GamePlayInputEnabled = false;
             controller?.ForceWin();
             SaveAll();
         }
 
-        // Opens Out of Lives, not the Level Fail popup directly - depletes the remaining mistake
-        // count to 0 via the same AddLevelMistakes(negative) path a real mistake spend uses (see
-        // CatFlapRuntimeSession.AddLevelMistakes), so this drives the exact real production
-        // Out-of-Lives flow (CatFlapGameplayManager.HandleOutOfMistakes) rather than a separate
-        // cheat-only shortcut. A no-op if the Level Attempt feature isn't enabled for this level
-        // (HandleOutOfMistakes itself skips the popup then) or there's no level loaded.
+        // Drains the remaining lives through the same path a real mistake uses, so this drives
+        // the real Out of Lives flow rather than a cheat-only shortcut. Timer mode ignores hearts,
+        // so there it runs the clock out instead (real Time's Up flow).
         public void CheatFailLevel()
         {
-            StopDelayedValidation();
+            StopPendingMistake();
 
             if (controller == null || !controller.Session.HasLevel)
             {
+                return;
+            }
+
+            if (controller.Session.TimerEnabled)
+            {
+                controller.Session.StartTimer();
+                controller.TickTimer(controller.Session.RemainingSeconds + 1f);
+                SaveAll();
                 return;
             }
 
@@ -64,13 +69,11 @@ namespace CatFlap.UnityAdapters
         public void CheatSetWrongValidationDelay(float delaySeconds)
         {
             wrongValidationDelaySeconds = Mathf.Max(0f, delaySeconds);
-            StopDelayedValidation();
         }
 
         public void CheatSetCorrectValidationDelay(float delaySeconds)
         {
             correctValidationDelaySeconds = Mathf.Max(0f, delaySeconds);
-            StopDelayedValidation();
         }
 
         public void CheatSetValidationDelays(float wrongDelaySeconds, float correctDelaySeconds)
@@ -78,12 +81,11 @@ namespace CatFlap.UnityAdapters
             wrongValidationDelaySeconds = Mathf.Max(0f, wrongDelaySeconds);
             correctValidationDelaySeconds = Mathf.Max(0f, correctDelaySeconds);
             cheatPanel?.SetValidationDelayValues(wrongValidationDelaySeconds, correctValidationDelaySeconds);
-            StopDelayedValidation();
         }
 
         public void CheatJumpToLevel(int levelNumber)
         {
-            StopDelayedValidation();
+            StopPendingMistake();
             int levelCount = GetLevelCount();
             if (levelCount <= 0)
             {
@@ -111,6 +113,7 @@ namespace CatFlap.UnityAdapters
             cheatPanel.WrongValidationDelayChanged.AddListener(CheatSetWrongValidationDelay);
             cheatPanel.CorrectValidationDelayChanged.AddListener(CheatSetCorrectValidationDelay);
             cheatPanel.SetValidationDelayValues(wrongValidationDelaySeconds, correctValidationDelaySeconds);
+            cheatPanel.SetCurrentLevelIndexKey(activeConfig.CurrentLevelIndexSaveKey);
             cheatPanel.SetLoopLevelReadout(CurrentLevelNumber, lastLoadedActualLevelNumber);
         }
 

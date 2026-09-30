@@ -50,6 +50,12 @@ namespace Shared.GameConfig
         [JsonProperty("levelExtraTime")]
         public int LevelExtraTime = 30;
 
+        // Hearts (wrong moves spend lives) or Timer (a countdown per level). Seconds added by a
+        // Timer-mode revive come from LevelExtraTime above.
+        [JsonProperty("gameplayMode")]
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public GameplayMode GameplayMode = GameplayMode.Hearts;
+
         [JsonProperty("hardLevels")]
         public int[] HardLevels = new int[0];
 
@@ -112,6 +118,7 @@ namespace Shared.GameConfig
                 LevelExtraMovesCount = Math.Max(0, LevelExtraMovesCount),
                 LevelExtraMovesOnRevive = Math.Max(0, LevelExtraMovesOnRevive),
                 LevelExtraTime = Math.Max(0, LevelExtraTime),
+                GameplayMode = GameplayMode,
                 HardLevels = NormalizeLevels(HardLevels),
                 LoopLevels = (LoopLevels ?? new LoopLevelConfig()).CloneNormalized(),
                 BoosterConfigList = NormalizeBoosterConfigList(BoosterConfigList),

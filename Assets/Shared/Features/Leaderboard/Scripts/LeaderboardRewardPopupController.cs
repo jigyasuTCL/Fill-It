@@ -792,7 +792,7 @@ namespace Shared.Leaderboard
         {
             Debug.Log(
                 "[Leaderboard] Reward popup complete - the level-win flow continues from here. "
-                + "Hook this up in CatFlapGameplayManager.HandleLevelWon (around the "
+                + "Hook this up in FillItGameplayManager.HandleLevelWon (around the "
                 + "leaderboardManager.AddWinPoints call), by subscribing to "
                 + "LeaderboardRewardPopupController.Completed or assigning its onRewardFlowComplete event.",
                 this);

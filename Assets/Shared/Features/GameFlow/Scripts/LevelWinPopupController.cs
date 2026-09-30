@@ -1,4 +1,4 @@
-using CatFlap.UnityAdapters;
+using FillIt.UnityAdapters;
 using DG.Tweening;
 using Game.SpinWheel;
 using NUnit.Framework;
@@ -66,7 +66,7 @@ namespace Shared.GameFlow
 
         // Fires when the "2x" button is tapped - the caller is expected to show the fake-ads
         // dialog and, on watched, call DoubleWinCoinsAndContinue (see
-        // CatFlapGameplayManager.HandleLevelWinWatchAd, mirroring the Out Of Lives watch-ad
+        // FillItGameplayManager.HandleLevelWinWatchAd, mirroring the Out Of Lives watch-ad
         // pattern). Nothing happens here on its own if no listener is bound.
         public UnityEvent WatchAdRequested = new UnityEvent();
 
@@ -89,7 +89,8 @@ namespace Shared.GameFlow
 
         [Header("Coin Header")]
         [SerializeField] List<GameObject> vfxToHideObjs = new List<GameObject>();
-        [SerializeField] CatFlapGameplayManager CatFlapGameplayManager; 
+        [FormerlySerializedAs("CatFlapGameplayManager")]
+        [SerializeField] FillItGameplayManager gameplayManager;
         [SerializeField] Image coinVFXPrefab;
         [Tooltip("Where the coin VFX spawns from. Falls back to coinImage's position if left unassigned.")]
         [SerializeField] private Transform coinVFXSpawnTransform;
@@ -120,11 +121,11 @@ namespace Shared.GameFlow
         private bool cachedHomePositions;
 
         // True unless SetAdsButtonVisible(false) is called before this popup opens (see
-        // CatFlapGameplayManager.UpdateLevelWinPopup / GlobalConfig.NoAdsBeforeLevel).
+        // FillItGameplayManager.UpdateLevelWinPopup / GlobalConfig.NoAdsBeforeLevel).
         private bool showAdsButton = true;
 
         // True unless SetHomeButtonVisible(false) is called before this popup opens (see
-        // CatFlapGameplayManager.UpdateLevelWinPopup) - hidden for the first 3 levels so a brand
+        // FillItGameplayManager.UpdateLevelWinPopup) - hidden for the first 3 levels so a brand
         // new player can only go forward via Next, not back out to the main menu mid-tutorial.
         private bool showHomeButton = true;
 
@@ -145,7 +146,7 @@ namespace Shared.GameFlow
 
         // Guards the "2x" button separately from nextLevelRequested - watching an ad doesn't
         // resolve to Continue/Home until AdsManager's callback actually reports success (see
-        // CatFlapGameplayManager.HandleLevelWinWatchAd), so a declined/failed ad needs to hand
+        // FillItGameplayManager.HandleLevelWinWatchAd), so a declined/failed ad needs to hand
         // control back to the player via OnWatchAdDeclined instead of leaving every button
         // permanently disabled.
         private bool adWatchInProgress;
@@ -194,7 +195,7 @@ namespace Shared.GameFlow
         }
 
         /// <summary>
-        /// Called by CatFlapGameplayManager.HandleLevelWinWatchAd when the rewarded ad callback
+        /// Called by FillItGameplayManager.HandleLevelWinWatchAd when the rewarded ad callback
         /// reports failure/decline, so the player isn't stranded with every button disabled and
         /// no way to continue.
         /// </summary>
@@ -288,7 +289,7 @@ namespace Shared.GameFlow
 
         /// <summary>
         /// Called once the fake-ads dialog reports the ad was actually watched (see
-        /// CatFlapGameplayManager.HandleLevelWinWatchAd) - doubles the pending coin reward, updates
+        /// FillItGameplayManager.HandleLevelWinWatchAd) - doubles the pending coin reward, updates
         /// the "+winCoin" label to match, then proceeds exactly like tapping Continue/Next.
         /// </summary>
         public void DoubleWinCoinsAndContinue()
@@ -512,7 +513,7 @@ namespace Shared.GameFlow
             SetButtonsInteractable(false);
             AnimateCoins(winCoin, () => GameTransitionOverlay.Instance.Play(
                 hideOldPage: () => gameObject.SetActive(false),
-                revealNewPage: () => CatFlapGameplayManager.LoadNextLevel()));
+                revealNewPage: () => gameplayManager.LoadNextLevel()));
         }
 
         // Wired to the win popup's Home/close button (see WireResultPageButtons in
@@ -526,12 +527,12 @@ namespace Shared.GameFlow
                 return;
             }
             nextLevelRequested = true;
-            CatFlapGameplayManager?.LogHomeFromWinPopup();
+            gameplayManager?.LogHomeFromWinPopup();
             StopContinueBob();
             SetButtonsInteractable(false);
             AnimateCoins(winCoin, () => GameTransitionOverlay.Instance.Play(
                 hideOldPage: () => gameObject.SetActive(false),
-                revealNewPage: () => CatFlapGameplayManager.SaveAndShowMainMenu()));
+                revealNewPage: () => gameplayManager.SaveAndShowMainMenu()));
         }
 
         // Set for the CURRENTLY in-flight AnimateCoins call - CompleteCoinAnimation invokes
@@ -822,7 +823,7 @@ namespace Shared.GameFlow
         /// <summary>
         /// Levels 1..N get that level's own CatFlapLevelResultTextConfig win line, in order; any
         /// level past the last configured entry gets a random one from the same list. Called by
-        /// CatFlapGameplayManager.UpdateLevelWinPopup before this popup is shown.
+        /// FillItGameplayManager.UpdateLevelWinPopup before this popup is shown.
         /// </summary>
         public void SetLevelResultText(int levelNumber)
         {

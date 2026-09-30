@@ -3,7 +3,7 @@ using DG.Tweening;
 using Shared.Boosters;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
     /// Idle-attention pulse on the Hint booster button - same DOTween Yoyo-scale technique as
@@ -11,12 +11,12 @@ namespace CatFlap.UnityAdapters
     /// (GameRulesConfig.HintHighlightIdleSeconds) instead of always-on.
     ///
     /// Starts pulsing once that many seconds pass with no board tap and no hint use while the Hint
-    /// booster is actually usable (see CatFlapGameplayManager wiring: HandleCellSelected and
+    /// booster is actually usable (see FillItGameplayManager wiring: HandleCellSelected and
     /// BoosterManager.BoosterImplementationStarted both call ResetTimer). Stops immediately -
     /// snapping straight back to the button's own captured base scale, never left mid-pulse - the
     /// instant either of those happens, or the hint stops being available (used up, locked, etc.).
     /// </summary>
-    public sealed class CatFlapHintHighlightAnimator : MonoBehaviour
+    public sealed class FillItHintHighlightAnimator : MonoBehaviour
     {
         [SerializeField] private float pulseScaleMultiplier = 1.08f;
         [SerializeField] private float pulseHalfDurationSeconds = 0.4f;
@@ -51,7 +51,7 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// Called whenever the player does anything that should postpone the highlight - a board
-        /// tap (CatFlapGameplayManager.HandleCellSelected) or actually using the Hint booster
+        /// tap (FillItGameplayManager.HandleCellSelected) or actually using the Hint booster
         /// (BoosterManager.BoosterImplementationStarted for BoosterType.Hint). Restarts the idle
         /// countdown from zero and, if a pulse was already playing, stops it and snaps the button
         /// back to its base scale - so a tap that lands WHILE the highlight is mid-pulse can never

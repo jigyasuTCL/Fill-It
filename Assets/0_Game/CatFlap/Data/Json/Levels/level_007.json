@@ -1,69 +1,10 @@
 {
-  "index": 7,
-  "name": "Level 7",
-  "set": "progression_1_6",
-  "difficulty": "Easy",
-  "size": 4,
-  "rules": {
-    "equalCounts": true,
-    "maxTwoAdjacent": true,
-    "uniqueLines": false
-  },
-  "clues": [
-    [
-      1,
-      null,
-      null,
-      0
-    ],
-    [
-      null,
-      1,
-      0,
-      1
-    ],
-    [
-      null,
-      0,
-      1,
-      null
-    ],
-    [
-      null,
-      null,
-      1,
-      0
-    ]
-  ],
-  "solution": [
-    [
-      1,
-      1,
-      0,
-      0
-    ],
-    [
-      0,
-      1,
-      0,
-      1
-    ],
-    [
-      0,
-      0,
-      1,
-      1
-    ],
-    [
-      1,
-      0,
-      1,
-      0
-    ]
-  ],
-  "coach": {
-    "icon": "🔢",
-    "title": "Rule 1 — let the counters do it",
-    "body": "You never have to count by hand. The <span class=\"text-rose-500 font-black\">pink</span> and <span class=\"text-cyan-500 font-black\">blue</span> numbers beside each row and above each column are the running totals. When one of them reaches 2, that line is done with that animal."
-  }
+    "id": "level_007",
+    "name": "Level 7",
+    "difficulty": "Easy",
+    "size": 4,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 45,
+    "clues": "0014/3244/0202/3000",
+    "solution": "3314/3244/1242/3332"
 }

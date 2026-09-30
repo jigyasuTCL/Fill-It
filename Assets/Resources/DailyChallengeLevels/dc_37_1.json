@@ -1,0 +1,10 @@
+{
+    "id": "dc_37_1",
+    "name": "Daily Challenge 37",
+    "difficulty": "Medium",
+    "size": 6,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 120,
+    "clues": "046200/000610/060000/465402/040050/405200",
+    "solution": "446223/446613/166443/465442/445552/415221"
+}

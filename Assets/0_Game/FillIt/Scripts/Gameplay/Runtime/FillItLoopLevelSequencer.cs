@@ -3,13 +3,13 @@ using System.Text;
 using Shared.GameConfig;
 using UnityEngine;
 
-namespace CatFlap.Runtime
+namespace FillIt.Runtime
 {
     // Builds one "loop set" of level numbers once the player has cleared every level in
-    // GlobalConfig.TotalLevels - see CatFlapGameplayManager.ResolveLoopLevelNumber. Pure/stateless:
+    // GlobalConfig.TotalLevels - see FillItGameplayManager.ResolveLoopLevelNumber. Pure/stateless:
     // every call reshuffles from scratch and returns a brand-new set, so the caller (which persists
     // the resolved sequence) decides when a fresh set is actually needed.
-    public static class CatFlapLoopLevelSequencer
+    public static class FillItLoopLevelSequencer
     {
         private enum Difficulty
         {

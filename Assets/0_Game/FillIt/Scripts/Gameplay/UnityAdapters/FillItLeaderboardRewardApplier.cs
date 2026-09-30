@@ -6,26 +6,26 @@ using UnityEngine;
 
 using PlayerDataModel = Shared.PlayerData.PlayerData;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
     /// Applies what a leaderboard cycle paid out to the actual game: coins into the session wallet,
     /// boosters into the player's stock.
     ///
     /// This exists because LeaderboardManager deliberately cannot do it. The leaderboard is a Shared
-    /// feature and has no business knowing what a Cat Flap booster or a runtime session is, so it
-    /// announces what was won (RewardsClaimed) and this Cat Flap adapter turns that into game state
+    /// feature and has no business knowing what a Fill It booster or a runtime session is, so it
+    /// announces what was won (RewardsClaimed) and this Fill It adapter turns that into game state
     /// - the same split CLAUDE.md describes for every other shared/game pairing.
     ///
     /// Profile rewards are NOT handled here: ProfileManager is Shared too, so the leaderboard grants
     /// those itself before the event fires.
     /// </summary>
-    public sealed class CatFlapLeaderboardRewardApplier : MonoBehaviour
+    public sealed class FillItLeaderboardRewardApplier : MonoBehaviour
     {
         [SerializeField] private LeaderboardManager leaderboard;
         // Optional. Coins go through the live session when there is one, so the HUD updates and the
         // normal save path runs; without it they fall back to PlayerData directly.
-        [SerializeField] private CatFlapGameplayManager gameplayManager;
+        [SerializeField] private FillItGameplayManager gameplayManager;
         [SerializeField] private string boosterCountKeyPrefix = PlayerDataDefaults.BoosterCountKeyPrefix;
 
         private readonly PlayerDataSaveSystem saveSystem = new PlayerDataSaveSystem();
@@ -83,7 +83,7 @@ namespace CatFlap.UnityAdapters
             // Through the session when one is live: that is what refreshes the coin HUD and runs
             // the normal persistence, rather than writing a number the running game would overwrite
             // on its next save.
-            CatFlap.Runtime.CatFlapRuntimeController controller = gameplayManager != null ? gameplayManager.Controller : null;
+            FillIt.Runtime.FillItRuntimeController controller = gameplayManager != null ? gameplayManager.Controller : null;
             if (controller?.Session != null)
             {
                 controller.Session.AddCoins(amount);
@@ -98,7 +98,7 @@ namespace CatFlap.UnityAdapters
 
         /// <summary>
         /// Adds to the player's stored booster count, the same key the cheat panel and
-        /// CatFlapGameProgressSaveManager both use, so a granted booster is picked up by the next
+        /// FillItGameProgressSaveManager both use, so a granted booster is picked up by the next
         /// wallet load exactly like a purchased one.
         /// </summary>
         private void GrantBooster(string boosterTypeName, int amount)
@@ -122,7 +122,7 @@ namespace CatFlap.UnityAdapters
 
             // Also into the live wallet, or the player would not see the new charge until the next
             // level load re-read it from disk.
-            CatFlap.Runtime.CatFlapRuntimeController controller = gameplayManager != null ? gameplayManager.Controller : null;
+            FillIt.Runtime.FillItRuntimeController controller = gameplayManager != null ? gameplayManager.Controller : null;
             if (controller?.Session?.BoosterWallet != null)
             {
                 controller.Session.BoosterWallet.RestoreCount(boosterType, Mathf.Max(0, current + amount));

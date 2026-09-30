@@ -711,7 +711,7 @@ MonoBehaviour:
   offscreenPadding: 500
   beatPlayersHighlightColor: {r: 0.99215686, g: 0.6313726, b: 0.5176471, a: 1}
   vfxToHideObjs: []
-  CatFlapGameplayManager: {fileID: 0}
+  gameplayManager: {fileID: 0}
   coinVFXPrefab: {fileID: 6809395651870365955, guid: 8753c8221a48040f8a83ee963622b612, type: 3}
   coinVFXSpawnTransform: {fileID: 0}
   coinCollectSettings: {fileID: 11400000, guid: 4e0a13ca9e44f47d3a106220dfa5b25f, type: 2}
@@ -1568,7 +1568,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 0
         m_Arguments:
@@ -1983,7 +1983,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 0
         m_Arguments:

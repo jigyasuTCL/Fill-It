@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     public sealed class MainMenuBottomButtonsAnimator : MonoBehaviour
     {

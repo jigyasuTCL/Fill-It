@@ -1389,7 +1389,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: SaveAndShowMainMenu
         m_Mode: 0
         m_Arguments:
@@ -1413,6 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6455314817011282630}
+  button: {fileID: 0}
   pressedScaleFactor: 0.85
   pressDurationSeconds: 0.08
   releaseDurationSeconds: 0.18
@@ -2139,7 +2140,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: SaveAndShowMainMenu
         m_Mode: 0
         m_Arguments:
@@ -2163,6 +2164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6184907465184907501}
+  button: {fileID: 0}
   pressedScaleFactor: 0.85
   pressDurationSeconds: 0.08
   releaseDurationSeconds: 0.18
@@ -2290,7 +2292,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 0
         m_Arguments:
@@ -2314,6 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6557795914574195575}
+  button: {fileID: 0}
   pressedScaleFactor: 0.85
   pressDurationSeconds: 0.08
   releaseDurationSeconds: 0.18
@@ -2494,22 +2497,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 9121946543911148037}
+  dateText: {fileID: 0}
   backgroundGroup: {fileID: 4530018812614526199}
   titleImage: {fileID: 3707533786339719412}
   catTransform: {fileID: 8902410999451320422}
   catTargetScale: 300
   catVideoRenderer: {fileID: 6444501298934798707}
   catOpenVideoClip: {fileID: 32900000, guid: 4d84c6bf6d15b4c80a69ddb70166d5ae, type: 3}
-  buttonContainer: {fileID: 5600489715137764933}
   primaryButton: {fileID: 439159440460112624}
-  primaryButtonLabel: {fileID: 1862154178228123727}
   backButton: {fileID: 7029756709179848837}
+  watchAdButton: {fileID: 0}
+  refillButton: {fileID: 0}
+  freeReviveButton: {fileID: 0}
+  watchAdRoot: {fileID: 0}
+  refillRoot: {fileID: 0}
+  freeReviveRoot: {fileID: 0}
+  refillButtonText: {fileID: 0}
+  refillTextFormat: Revive {0}
+  WatchAdRequested:
+    m_PersistentCalls:
+      m_Calls: []
+  RefillRequested:
+    m_PersistentCalls:
+      m_Calls: []
+  FreeReviveRequested:
+    m_PersistentCalls:
+      m_Calls: []
   progressLabel: {fileID: 5424857848303384994}
   backgroundFadeDuration: 0.25
   catScaleDuration: 0.35
-  buttonMoveDuration: 0.4
+  buttonScaleDuration: 0.1
   typewriterCharsPerSecond: 20
-  offscreenPadding: 1200
 --- !u!1 &9218234657526028045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2645,6 +2663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 150635639032606894}
+  button: {fileID: 0}
   pressedScaleFactor: 0.85
   pressDurationSeconds: 0.08
   releaseDurationSeconds: 0.18

@@ -1,0 +1,10 @@
+{
+    "id": "dc_35_1",
+    "name": "Daily Challenge 35",
+    "difficulty": "Medium",
+    "size": 7,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 165,
+    "clues": "6060030/6600002/6050504/0030007/0503071/5000040/1061040",
+    "solution": "6663332/6655442/6155544/5533777/5563771/5666744/1661744"
+}

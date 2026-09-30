@@ -9,7 +9,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
     /// Daily Challenge sub-level WIN result popup. Visual/animation clone of
@@ -17,21 +17,21 @@ namespace CatFlap.UnityAdapters
     /// feature-nudge banner) EXCEPT:
     ///  - Four buttons: 2x (ads, doubles the reward then behaves like Primary), Primary, Back,
     ///    and Close (X, behaves exactly like Primary - not a separate destination). The bridge
-    ///    (CatFlapDailyChallengeBridge) decides Primary/Back's labels/actions/whether Back shows;
+    ///    (FillItDailyChallengeBridge) decides Primary/Back's labels/actions/whether Back shows;
     ///    this component only presents them.
     ///  - Same CoinCollectAnimator bloom/hover/stream coin-collect VFX as LevelWinPopupController,
     ///    played on Primary/Back click (see AnimateCoins) - the real reward amount comes from
-    ///    GlobalConfig.DailyChallenge.LevelWinCoins via CatFlapGameplayManager.
-    ///    GetDailyChallengeLevelWinCoinInfo / CatFlapDailyChallengeBridge.SetCurrentCoin.
+    ///    GlobalConfig.DailyChallenge.LevelWinCoins via FillItGameplayManager.
+    ///    GetDailyChallengeLevelWinCoinInfo / FillItDailyChallengeBridge.SetCurrentCoin.
     ///  - Moves/timer values are still placeholders - a Daily Challenge sub-level has no
     ///    moves/time data of its own to report; day-completion rewards are presented separately
     ///    by DailyChallengeController's reward track.
     ///  - Primary/Back invoke the bridge-supplied Action callbacks (same as before) instead of
-    ///    calling CatFlapGameplayManager directly, since this popup doesn't own navigation - the
+    ///    calling FillItGameplayManager directly, since this popup doesn't own navigation - the
     ///    callback only fires once the coin-collect VFX finishes, same as
     ///    LevelWinPopupController's OnNextLevelClicked/OnHomeClicked.
     /// </summary>
-    public sealed class CatFlapDailyChallengeWinPopupController : MonoBehaviour
+    public sealed class FillItDailyChallengeWinPopupController : MonoBehaviour
     {
         [Header("Core")]
         [SerializeField] private GameObject root;
@@ -142,7 +142,7 @@ namespace CatFlap.UnityAdapters
 
         // Guards the 2x button separately from actionRequested - watching an ad doesn't resolve
         // to Primary/Back until AdsManager's callback actually reports success (see
-        // CatFlapDailyChallengeBridge.HandleWinWatchAd), so a declined/failed ad needs to hand
+        // FillItDailyChallengeBridge.HandleWinWatchAd), so a declined/failed ad needs to hand
         // control back to the player via OnWatchAdDeclined instead of leaving every button
         // permanently disabled.
         private bool adWatchInProgress;
@@ -183,7 +183,7 @@ namespace CatFlap.UnityAdapters
         // (showing the static poster sprite) is hidden only while the video is visible.
         //
         // The extra Canvas/overrideSorting step (unlike the simpler version in
-        // CatFlapDailyChallengeFailPopupController) exists because winParticles can draw on top of
+        // FillItDailyChallengeFailPopupController) exists because winParticles can draw on top of
         // a plain nested-Canvas RawImage at an exactly equal Order in Layer - padding well past any
         // particle/decoration order in this popup makes the ordering unambiguous.
         private void EnsureCatVideoPlayer()
@@ -323,7 +323,7 @@ namespace CatFlap.UnityAdapters
 
         // title is unused here - the Win popup's title is predefined art/text baked into
         // titleImage's prefab content, not set at runtime (kept in the signature to stay
-        // symmetric with CatFlapDailyChallengeFailPopupController and the bridge's call site).
+        // symmetric with FillItDailyChallengeFailPopupController and the bridge's call site).
         public void Show(string title, string progressText, string primaryLabel, bool showBack, Action primaryAction, Action backAction)
         {
             if (root == null)
@@ -341,7 +341,7 @@ namespace CatFlap.UnityAdapters
             // TODO: fake placeholder values until moves/timer data is actually wired up for
             // Daily Challenge sub-levels - mirrors LevelWinPopupController's own
             // SetBeatPercentage(90f) TODO for its "beat X% of players" stat.
-            // winCoin/currentCoin are NOT reset here - CatFlapDailyChallengeBridge calls
+            // winCoin/currentCoin are NOT reset here - FillItDailyChallengeBridge calls
             // SetCurrentCoin with the real pre-win balance/reward just before this runs.
             pendingMovesValue = "0";
             pendingTimerValue = "00:00";
@@ -431,9 +431,9 @@ namespace CatFlap.UnityAdapters
             });
         }
 
-        // Fires WatchAdRequested - CatFlapDailyChallengeBridge shows the fake-ads dialog and, once
+        // Fires WatchAdRequested - FillItDailyChallengeBridge shows the fake-ads dialog and, once
         // actually watched, calls DoubleWinCoinsAndContinue below (same pattern as
-        // LevelWinPopupController's ads button / CatFlapGameplayManager.HandleLevelWinWatchAd).
+        // LevelWinPopupController's ads button / FillItGameplayManager.HandleLevelWinWatchAd).
         public UnityEvent WatchAdRequested = new UnityEvent();
 
         private void RequestWatchAd()
@@ -451,7 +451,7 @@ namespace CatFlap.UnityAdapters
         }
 
         /// <summary>
-        /// Called by CatFlapDailyChallengeBridge.HandleWinWatchAd when the rewarded ad callback
+        /// Called by FillItDailyChallengeBridge.HandleWinWatchAd when the rewarded ad callback
         /// reports failure/decline, so the player isn't stranded with every button disabled and
         /// no way to continue.
         /// </summary>

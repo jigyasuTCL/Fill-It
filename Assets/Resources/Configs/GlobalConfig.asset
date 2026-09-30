@@ -22,6 +22,7 @@ MonoBehaviour:
     LevelExtraMovesCount: 3
     LevelExtraMovesOnRevive: 3
     LevelExtraTime: 30
+    GameplayMode: 1
     HardLevels: 0f00000014000000190000001e00000023000000280000002d00000032000000370000003c00000041000000460000004b00000050000000550000005a0000005f00000064000000
     LoopLevels:
       EasyLevels: 15000000160000001a0000001b0000001f000000200000002400000025000000290000002a0000002e0000002f000000330000003400000038000000390000003d0000003e000000420000004300000047000000480000004c0000004d000000510000005200000056000000570000005b0000005c0000006000000061000000
@@ -46,8 +47,8 @@ MonoBehaviour:
       AdBuyCount: 1
     ResumeSavedLevelOnPlay: 1
     RestoreCurrentBoardOnLoad: 1
-    CurrentLevelIndexSaveKey: CatFlap.CurrentLevelIndex
-    BoardStateSaveKeyPrefix: CatFlap.Board.
+    CurrentLevelIndexSaveKey: FillIt.CurrentLevelIndex
+    BoardStateSaveKeyPrefix: FillIt.Board.
     DailyChallenge:
       Enabled: 1
       UnlockLevel: 16
@@ -218,6 +219,7 @@ MonoBehaviour:
       FirstRunSpreadPoints: 14
       AnchoredRivalCount: 10
       CycleHours: 24
+      CooldownHours: 1
       Bots:
         Presets:
         - Name: grinder
@@ -371,6 +373,9 @@ MonoBehaviour:
           Min: 0
           Max: 30
         OnlineTailMinutes: 5
+        IdleOnlinePercent: 16
+        IdlePlayingPercent: 6
+        PresenceBucketMinutes: 4
         StartingBotsLastSeenHours:
           Min: 1
           Max: 8

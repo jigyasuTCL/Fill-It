@@ -1,17 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
     /// Dims the whole screen except a window over the active hint's cell, using four opaque
     /// strips sized from that cell's on-screen rect. Purely a UI reaction to
-    /// CatFlapGameplayManager's hint state - it does not decide when a hint is active.
+    /// FillItGameplayManager's hint state - it does not decide when a hint is active.
     /// </summary>
-    public sealed class CatFlapHintSpotlightController : MonoBehaviour
+    public sealed class FillItHintSpotlightController : MonoBehaviour
     {
         [SerializeField] private GameObject overlayRoot;
-        [SerializeField] private CatFlapSpriteBoardViewAdapter boardView;
+        [SerializeField] private FillItBoardView boardView;
         [SerializeField] private RectTransform topStrip;
         [SerializeField] private RectTransform bottomStrip;
         [SerializeField] private RectTransform leftStrip;

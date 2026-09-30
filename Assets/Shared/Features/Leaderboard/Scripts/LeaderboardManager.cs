@@ -422,7 +422,7 @@ namespace Shared.Leaderboard
 
                 Debug.LogWarning(
                     "[Leaderboard] Claimed a reward containing coins or boosters, but nothing is subscribed to "
-                    + "RewardsClaimed - so none of it will be granted. Add a CatFlapLeaderboardRewardApplier to the "
+                    + "RewardsClaimed - so none of it will be granted. Add a FillItLeaderboardRewardApplier to the "
                     + "scene and assign this manager to it.",
                     this);
                 return;

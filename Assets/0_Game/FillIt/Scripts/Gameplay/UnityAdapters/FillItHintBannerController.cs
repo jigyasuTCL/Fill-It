@@ -1,36 +1,27 @@
-using CatFlap.Models;
+using FillIt.Runtime;
 using Shared.GameFlow;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CatFlap.UnityAdapters
+namespace FillIt.UnityAdapters
 {
     /// <summary>
-    /// Shows the hint icon + a runtime-built description while a hint highlight is active. The
-    /// description text is chosen from the hint's reason key (why this cell/value was suggested),
-    /// not a fixed string. Purely a UI reaction to CatFlapGameplayManager's hint state - it does
-    /// not itself decide when a hint is shown or cleared.
+    /// Shows the hint card while a hint highlight is active: the number to place plus a sentence
+    /// explaining why (chosen from the hint's reason key). Purely a UI reaction to
+    /// FillItGameplayManager's hint state - it does not decide when a hint is shown or cleared.
     /// </summary>
-    public sealed class CatFlapHintBannerController : MonoBehaviour
+    public sealed class FillItHintBannerController : MonoBehaviour
     {
         [SerializeField] private GameObject bannerRoot;
         [SerializeField] private PopupScaleAnimator animator;
         [SerializeField] private Image iconImage;
         [SerializeField] private TextMeshProUGUI descriptionLabel;
-        [SerializeField] private Sprite fishIconSprite;
-        [SerializeField] private Sprite catIconSprite;
-        [SerializeField] private string fishName = "Fish";
-        [SerializeField] private string catName = "Cat";
+        [Tooltip("Optional - shows the revealed number in large type next to the description.")]
+        [SerializeField] private TextMeshProUGUI valueLabel;
+        [SerializeField] private string fallbackFormat = "Place a {0} here.";
 
-        [Header("Description templates for reasons CatFlapHintTextConfig (Resources/Configs) has no entry for - {0} = suggested value, {1} = the other value")]
-        [SerializeField] private string unlocksForcedCellsFormat = "Placing {0} here unlocks more forced cells nearby.";
-        [SerializeField] private string oneMissingLineFormat = "This line just needs one more {0} to complete it.";
-        [SerializeField] private string maxTwoAdjacentFormat = "Two adjacent cells already have {1} - place {0} here to fix it.";
-        [SerializeField] private string leastEmptyLineFormat = "This row/column has the fewest empty cells left - try {0} here.";
-        [SerializeField] private string fallbackFormat = "Place {0} here to help complete a line.";
-
-        public void Show(CatFlapCellValue value, string reasonKey)
+        public void Show(int value, string reasonKey)
         {
             if (bannerRoot == null)
             {
@@ -39,9 +30,12 @@ namespace CatFlap.UnityAdapters
 
             if (iconImage != null)
             {
-                Sprite icon = ResolveIcon(value);
-                iconImage.sprite = icon;
-                iconImage.enabled = icon != null;
+                iconImage.enabled = valueLabel == null && iconImage.sprite != null;
+            }
+
+            if (valueLabel != null)
+            {
+                valueLabel.text = value.ToString();
             }
 
             if (descriptionLabel != null)
@@ -51,18 +45,6 @@ namespace CatFlap.UnityAdapters
 
             bannerRoot.SetActive(true);
             animator?.PlayOpen();
-        }
-
-        private string ResolveDescription(CatFlapCellValue value, string reasonKey)
-        {
-            if (CatFlapHintTextConfig.Load()?.TryBuildMessage(reasonKey, value, out string configuredMessage) == true)
-            {
-                return configuredMessage;
-            }
-
-            string valueName = value == CatFlapCellValue.Cat ? catName : fishName;
-            string otherValueName = value == CatFlapCellValue.Cat ? fishName : catName;
-            return string.Format(ResolveTemplate(reasonKey), valueName, otherValueName);
         }
 
         public void Hide()
@@ -81,34 +63,14 @@ namespace CatFlap.UnityAdapters
             animator.PlayClose(() => bannerRoot.SetActive(false));
         }
 
-        private string ResolveTemplate(string reasonKey)
+        private string ResolveDescription(int value, string reasonKey)
         {
-            switch (reasonKey)
+            if (FillItHintTextConfig.Load()?.TryBuildMessage(reasonKey, value, out string configuredMessage) == true)
             {
-                case "UnlocksForcedCells":
-                    return unlocksForcedCellsFormat;
-                case "OneMissingLine":
-                    return oneMissingLineFormat;
-                case "MaxTwoAdjacent":
-                    return maxTwoAdjacentFormat;
-                case "LeastEmptyLine":
-                    return leastEmptyLineFormat;
-                default:
-                    return fallbackFormat;
+                return configuredMessage;
             }
-        }
 
-        private Sprite ResolveIcon(CatFlapCellValue value)
-        {
-            switch (value)
-            {
-                case CatFlapCellValue.Fish:
-                    return fishIconSprite;
-                case CatFlapCellValue.Cat:
-                    return catIconSprite;
-                default:
-                    return null;
-            }
+            return string.Format(fallbackFormat, value);
         }
     }
 }

@@ -11,7 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e3d88459800441794309d37d335e89e, type: 3}
   m_Name: FtueSteps_Level3
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Steps:
-  - Description: Tap twice to place a <sprite="CatFlapFtueCatSpriteAsset" name="Cat">
-  - Description: Tap here again to place a <sprite="CatFlapFtueCatSpriteAsset" name="Cat">
+  - Description: "This 4 needs 3 more cells. <b>Drag</b> from the 4 to grow it."

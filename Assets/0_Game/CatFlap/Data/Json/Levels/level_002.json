@@ -1,37 +1,10 @@
 {
-  "index": 2,
-  "name": "Level 2",
-  "set": "progression_1_6",
-  "difficulty": "Easy",
-  "size": 2,
-  "rules": {
-    "equalCounts": true,
-    "maxTwoAdjacent": true,
-    "uniqueLines": false
-  },
-  "clues": [
-    [
-      1,
-      null
-    ],
-    [
-      null,
-      1
-    ]
-  ],
-  "solution": [
-    [
-      1,
-      0
-    ],
-    [
-      0,
-      1
-    ]
-  ],
-  "coach": {
-    "icon": "🐟",
-    "title": "Two Fish this time",
-    "body": "Two empty squares, and both want a Fish 🐟. One tap each.<br>Notice the board: every row and every column ends up with <b>one Cat and one Fish</b>. Remember that."
-  }
+    "id": "level_002",
+    "name": "Level 2",
+    "difficulty": "Easy",
+    "size": 3,
+    "levelMistakeLimit": 0,
+    "timeLimitSeconds": 45,
+    "clues": "200/210/122",
+    "solution": "233/213/122"
 }

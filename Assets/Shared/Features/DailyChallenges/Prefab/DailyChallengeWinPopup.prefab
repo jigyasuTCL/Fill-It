@@ -916,6 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 972470144025844664}
+  button: {fileID: 0}
   pressedScaleFactor: 0.85
   pressDurationSeconds: 0.08
   releaseDurationSeconds: 0.18
@@ -1430,6 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 700221132632222960}
+  button: {fileID: 0}
   pressedScaleFactor: 0.85
   pressDurationSeconds: 0.08
   releaseDurationSeconds: 0.18
@@ -2085,7 +2087,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 0
         m_Arguments:
@@ -2109,6 +2111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4924640668946146172}
+  button: {fileID: 0}
   pressedScaleFactor: 0.85
   pressDurationSeconds: 0.08
   releaseDurationSeconds: 0.18
@@ -2213,6 +2216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 6806836380947489142}
+  dateText: {fileID: 0}
   movesText: {fileID: 3711631885506488561}
   timerText: {fileID: 8543948026868313130}
   timerContainer: {fileID: 1049772802898091214}
@@ -2233,6 +2237,15 @@ MonoBehaviour:
   primaryButtonLabel: {fileID: 4401284147168127984}
   backButton: {fileID: 6825606749156807271}
   backButtonTransform: {fileID: 700221132632222960}
+  buttonContainer: {fileID: 0}
+  bobButtonContainer: 0
+  continueBobDelaySeconds: 1.5
+  continueBobAmplitude: 1.15
+  continueBobDuration: 0.55
+  adsButton: {fileID: 0}
+  adsButtonTransform: {fileID: 0}
+  closeButton: {fileID: 0}
+  skipButton: {fileID: 0}
   particleDelay: 0
   backgroundFadeDuration: 0.125
   catScaleDuration: 0.175
@@ -2253,6 +2266,9 @@ MonoBehaviour:
   spinWheelManager: {fileID: 0}
   dailyRewardManager: {fileID: 0}
   spinOrRewardAvailableBanner: {fileID: 7707051962561410974}
+  WatchAdRequested:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7134557439737295241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,7 +2391,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatFlap.UnityAdapters.CatFlapGameplayManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: FillIt.UnityAdapters.FillItGameplayManager, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 0
         m_Arguments:
